@@ -1,0 +1,25 @@
+.produits-cta {
+  margin-top: 64px;
+  padding: 48px;
+  background: var(--gris-leger);
+  border-radius: 20px;
+  border: 1px solid var(--bordure);
+  text-align: center;
+}
+
+.produits-cta h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--texte);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.produits-cta p {
+  font-size: 15px;
+  color: var(--texte-sec);
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}

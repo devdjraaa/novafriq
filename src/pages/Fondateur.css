@@ -1,0 +1,55 @@
+.fondateur-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.fondateur-photo {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.fondateur-name-card {
+  background: var(--noir);
+  border-radius: 12px;
+  padding: 20px 24px;
+  border: 1px solid rgba(200,169,110,0.2);
+}
+
+.fondateur-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blanc);
+  margin-bottom: 4px;
+}
+
+.fondateur-title {
+  font-size: 13px;
+  color: var(--or);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.fondateur-content h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--texte);
+  line-height: 1.3;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.fondateur-content p {
+  font-size: 16px;
+  color: var(--texte-sec);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .fondateur-layout { grid-template-columns: 1fr; gap: 40px; }
+  .fondateur-photo { position: static; }
+}
