@@ -1,0 +1,118 @@
+name: Deploy NovAfriq Site
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          CI: false
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # known_hosts best-effort : ne doit pas faire échouer le step
+          ssh-keyscan -T 10 -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Deploy Nginx
+        run: |
+          ssh -i ~/.ssh/id_ed25519 \
+              -o StrictHostKeyChecking=no \
+              -o BatchMode=yes \
+              ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} bash << 'ENGNX'
+
+          CONF_SRC_TMP=$(mktemp)
+          CONF_DEST=/etc/nginx/sites-available/novafriq.conf
+          CONF_LINK=/etc/nginx/sites-enabled/novafriq.conf
+          DOMAIN=novafriq.africa
+
+          cat > "$CONF_SRC_TMP" << 'NGINXCONF'
+          server {
+              listen 80;
+              server_name novafriq.africa www.novafriq.africa;
+              root /var/www/novafriq;
+              index index.html;
+              location / { try_files $uri $uri/ /index.html; }
+              location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp)$ {
+                  expires 1y;
+                  add_header Cache-Control "public, immutable";
+                  access_log off;
+              }
+              location ~ /\.(?!well-known).* { deny all; }
+              error_log  /var/log/nginx/novafriq_error.log;
+              access_log /var/log/nginx/novafriq_access.log;
+          }
+          NGINXCONF
+
+          # Ne remplace la conf QUE si elle n'existe pas encore (certbot y a ajouté le SSL :
+          # on ne veut pas écraser les blocs « managed by Certbot »).
+          if [ ! -f "$CONF_DEST" ]; then
+            sudo cp "$CONF_SRC_TMP" "$CONF_DEST"
+            echo "→ nginx novafriq.conf créé"
+          fi
+          rm -f "$CONF_SRC_TMP"
+
+          if [ ! -L "$CONF_LINK" ]; then
+            sudo ln -sf "$CONF_DEST" "$CONF_LINK"
+            echo "→ site activé"
+          fi
+
+          mkdir -p /var/www/novafriq 2>/dev/null || true
+
+          if sudo nginx -t 2>/dev/null; then
+            sudo systemctl reload nginx
+            echo "✓ nginx rechargé"
+          else
+            sudo nginx -t; exit 1
+          fi
+
+          if [ ! -d "/etc/letsencrypt/live/$DOMAIN" ]; then
+            if command -v certbot > /dev/null; then
+              echo "→ Génération SSL..."
+              sudo certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m dev.djraaa@gmail.com --redirect
+              echo "✅ SSL activé"
+            else
+              echo "⏭️  certbot absent"
+            fi
+          else
+            echo "→ SSL déjà présent"
+          fi
+          ENGNX
+
+      - name: Deploy dist to VPS
+        run: |
+          rsync -az --delete \
+            --chmod=D755,F644 \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no -o BatchMode=yes" \
+            ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/novafriq/
+
+      - name: Reload Nginx
+        run: |
+          ssh -i ~/.ssh/id_ed25519 \
+              -o StrictHostKeyChecking=no \
+              -o BatchMode=yes \
+              ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+              "sudo systemctl reload nginx && echo '✅ NovAfriq déployé'"
