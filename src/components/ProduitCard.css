@@ -20,7 +20,7 @@
 
 .produit-banner {
   height: 140px;
-  background: #0D1117;
+  background: var(--noir);
   position: relative;
   display: flex;
   align-items: center;

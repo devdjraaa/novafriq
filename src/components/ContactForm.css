@@ -17,7 +17,7 @@
   display: block;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(250,250,248,0.6);
+  color: rgba(255,255,255,0.6);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -51,7 +51,7 @@
 .form-group select option { background: var(--noir); }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: rgba(250,250,248,0.25); }
+.form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
 
 .contact-submit { width: 100%; justify-content: center; }
 

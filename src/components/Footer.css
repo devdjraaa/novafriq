@@ -25,7 +25,7 @@
 
 .footer-brand p {
   font-size: 14px;
-  color: rgba(250,250,248,0.4);
+  color: rgba(255,255,255,0.4);
   line-height: 1.75;
   max-width: 280px;
   margin-bottom: 28px;
@@ -56,7 +56,7 @@
 
 .social-btn svg {
   width: 16px; height: 16px;
-  stroke: rgba(250,250,248,0.6);
+  stroke: rgba(255,255,255,0.6);
   fill: none;
   stroke-width: 1.5;
   stroke-linecap: round;
@@ -66,7 +66,7 @@
 .footer-col h4 {
   font-size: 12px;
   font-weight: 600;
-  color: rgba(250,250,248,0.4);
+  color: rgba(255,255,255,0.4);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -82,7 +82,7 @@
 .footer-col ul li a,
 .footer-col ul li button {
   font-size: 14px;
-  color: rgba(250,250,248,0.55);
+  color: rgba(255,255,255,0.55);
   text-decoration: none;
   transition: var(--transition);
   cursor: pointer;
@@ -107,7 +107,7 @@
 
 .footer-copy {
   font-size: 13px;
-  color: rgba(250,250,248,0.3);
+  color: rgba(255,255,255,0.3);
 }
 
 .footer-legal {
@@ -118,7 +118,7 @@
 .footer-legal a,
 .footer-legal button {
   font-size: 13px;
-  color: rgba(250,250,248,0.3);
+  color: rgba(255,255,255,0.3);
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition);

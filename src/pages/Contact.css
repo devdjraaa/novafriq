@@ -1,6 +1,6 @@
 .contact-section { min-height: 100vh; }
 
-.contact-breadcrumb { color: rgba(250,250,248,0.3); }
+.contact-breadcrumb { color: rgba(255,255,255,0.3); }
 .contact-breadcrumb-current { color: var(--or); }
 
 .contact-heading { margin-bottom: 64px; }
@@ -33,7 +33,7 @@
 
 .contact-info p {
   font-size: 15px;
-  color: rgba(250,250,248,0.55);
+  color: rgba(255,255,255,0.55);
   line-height: 1.75;
   margin-bottom: 40px;
 }
@@ -74,7 +74,7 @@
 
 .contact-detail-label {
   font-size: 11px;
-  color: rgba(250,250,248,0.4);
+  color: rgba(255,255,255,0.4);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 4px;
