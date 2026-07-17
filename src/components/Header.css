@@ -2,9 +2,9 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--header-h);
-  background: rgba(11,13,15,0.97);
+  background: rgba(8,31,77,0.97);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(200,169,110,0.15);
+  border-bottom: 1px solid rgba(37,99,235,0.15);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
   transition: border-color var(--transition);
 }
 
-#header.scrolled { border-bottom-color: rgba(200,169,110,0.25); }
+#header.scrolled { border-bottom-color: rgba(37,99,235,0.25); }
 
 .logo-wrap {
   display: flex;
@@ -80,7 +80,7 @@
 
 #main-nav a:hover {
   color: var(--blanc);
-  background: rgba(200,169,110,0.1);
+  background: rgba(37,99,235,0.1);
 }
 
 #main-nav a.active {
@@ -120,10 +120,10 @@
 #mobile-menu {
   position: fixed;
   top: 72px; left: 0; right: 0;
-  background: rgba(11,13,15,0.98);
+  background: rgba(8,31,77,0.98);
   z-index: 999;
   padding: 16px 24px;
-  border-bottom: 1px solid rgba(200,169,110,0.15);
+  border-bottom: 1px solid rgba(37,99,235,0.15);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -138,7 +138,7 @@
   border-radius: 8px;
 }
 
-#mobile-menu a.active { color: var(--or); background: rgba(200,169,110,0.1); }
+#mobile-menu a.active { color: var(--or); background: rgba(37,99,235,0.1); }
 
 #mobile-menu a.mobile-cta {
   background: var(--or);

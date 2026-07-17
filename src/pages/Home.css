@@ -12,8 +12,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -189,9 +189,9 @@
 }
 
 .status-coming {
-  background: rgba(200,169,110,0.15);
+  background: rgba(37,99,235,0.15);
   color: var(--or);
-  border: 1px solid rgba(200,169,110,0.2);
+  border: 1px solid rgba(37,99,235,0.2);
 }
 
 .produit-apercu-desc {

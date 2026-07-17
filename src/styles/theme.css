@@ -3,17 +3,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --noir: #0B0D0F;
-  --or: #C8A96E;
-  --or-light: #E8D5A3;
-  --or-dark: #A07840;
-  --blanc: #FAFAF8;
-  --gris-leger: #F2F0EB;
-  --gris-moyen: #9A9590;
-  --gris-fonce: #3A3733;
-  --texte: #1A1916;
-  --texte-sec: #6B6760;
-  --bordure: #E0DDD7;
+  --noir: #081F4D;
+  --or: #2563EB;
+  --or-light: #3B82F6;
+  --or-dark: #1D4ED8;
+  --emeraude: #16A34A;
+  --dore: #D4AF37;
+  --blanc: #FFFFFF;
+  --gris-leger: #F5F7FA;
+  --gris-moyen: #94A3B8;
+  --gris-fonce: #1E293B;
+  --texte: #1E293B;
+  --texte-sec: #64748B;
+  --bordure: #E2E8F0;
   --header-h: 72px;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -133,7 +135,7 @@ body {
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
-  border: 1px solid rgba(200,169,110,0.3);
+  border: 1px solid rgba(37,99,235,0.3);
   cursor: pointer;
   transition: var(--transition);
   font-family: var(--font-body);
@@ -229,8 +231,8 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(200,169,110,0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(200,169,110,0.05) 0%, transparent 40%);
+    radial-gradient(circle at 20% 50%, rgba(37,99,235,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.05) 0%, transparent 40%);
 }
 
 .page-hero {
@@ -245,7 +247,7 @@ body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(200,169,110,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent);
 }
 
 .page-hero .container { position: relative; z-index: 1; }
