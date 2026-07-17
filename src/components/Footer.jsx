@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { useToast } from './ToastContext'
 import './Footer.css'
 
 export default function Footer() {
   const showToast = useToast()
+  const [email, setEmail] = useState('')
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault()
+    if (!email) return
+    showToast('Merci ! Vous êtes inscrit à notre newsletter.')
+    setEmail('')
+  }
 
   return (
     <footer id="footer">
@@ -61,6 +70,27 @@ export default function Footer() {
             <li><Link to="/partenaires">Partenariats</Link></li>
             <li><a href="mailto:direction@novafriq.africa">direction@novafriq.africa</a></li>
           </ul>
+        </div>
+
+        <div className="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Recevez nos actualités et l'avancée de nos produits.</p>
+          <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+            <input
+              type="email"
+              placeholder="Votre email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              aria-label="Adresse email"
+            />
+            <button type="submit" aria-label="S'inscrire">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
 

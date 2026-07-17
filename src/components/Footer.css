@@ -8,7 +8,7 @@
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 1.3fr;
   gap: 48px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -95,6 +95,50 @@
 
 .footer-col ul li a:hover,
 .footer-col ul li button:hover { color: var(--or); }
+
+.footer-newsletter p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--blanc);
+  font-family: var(--font-body);
+}
+
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
+.newsletter-form input:focus { outline: none; border-color: var(--or); }
+
+.newsletter-form button {
+  width: 38px;
+  flex-shrink: 0;
+  background: var(--or);
+  border: none;
+  border-radius: 8px;
+  color: var(--blanc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newsletter-form button:hover { background: var(--or-light); }
+.newsletter-form button svg { width: 16px; height: 16px; }
 
 .footer-bottom {
   max-width: 1120px;
