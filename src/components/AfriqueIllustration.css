@@ -8,6 +8,14 @@
   fill: rgba(37,99,235,0.06);
   stroke: rgba(37,99,235,0.25);
   stroke-width: 1.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: afriqueBreathe 9s ease-in-out infinite;
+}
+
+@keyframes afriqueBreathe {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.035) rotate(1.2deg); }
 }
 
 .afrique-link {
