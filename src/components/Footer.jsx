@@ -78,7 +78,6 @@ export default function Footer() {
           <button type="button" onClick={() => showToast('Page en cours de rédaction')}>Mentions légales</button>
           <button type="button" onClick={() => showToast('Page en cours de rédaction')}>Politique de confidentialité</button>
           <button type="button" onClick={() => showToast('Page en cours de rédaction')}>CGU</button>
-          <a href="https://gextimo.novafriq.africa" target="_blank" rel="noreferrer">Gextimo</a>
         </div>
       </div>
     </footer>
