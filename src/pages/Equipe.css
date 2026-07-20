@@ -29,7 +29,7 @@
   max-width: 600px;
 }
 
-.equipe-note strong { color: var(--texte); }
+.equipe-note strong { color: var(--corps); }
 
 @media (max-width: 1024px) {
   .equipe-grid { grid-template-columns: repeat(2, 1fr); }
