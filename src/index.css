@@ -1,41 +1,7 @@
-/* Base NOVAFRIQ — noir & blanc, s'adapte clair/sombre. */
-:root {
-  --text: #3d3a42;
-  --text-h: #0d0d0d;
-  --bg: #ffffff;
+@import './styles/theme.css';
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-
-  font: 16px/150% var(--sans);
-  letter-spacing: 0.15px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #b9b6bf;
-    --text-h: #f5f4f6;
-    --bg: #101014;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  min-height: 100dvh;
-  background: var(--bg);
-}
-
-h1 {
-  color: var(--text-h);
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }

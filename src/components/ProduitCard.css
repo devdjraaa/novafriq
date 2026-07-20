@@ -1,0 +1,118 @@
+.produit-card {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--bordure);
+  transition: var(--transition);
+  cursor: pointer;
+  background: var(--blanc);
+  text-decoration: none;
+  color: inherit;
+}
+
+.produit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+  border-color: var(--or);
+}
+
+.produit-card.active-product { border-color: var(--or); }
+
+.produit-banner {
+  height: 140px;
+  background: var(--noir);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.produit-banner.gextimo-bg {
+  background: linear-gradient(135deg, #1A0A00 0%, #3D1F00 50%, #1A0A00 100%);
+}
+
+.produit-banner .produit-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.produit-logo-ph {
+  width: 72px; height: 72px;
+  background: rgba(39,198,217,0.1);
+  border: 1px dashed rgba(39,198,217,0.3);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.produit-logo-ph span {
+  font-size: 9px;
+  color: rgba(39,198,217,0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.produit-logo-gextimo {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--or);
+  letter-spacing: -0.02em;
+}
+
+.produit-body { padding: 24px; }
+
+.produit-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--texte);
+  margin-bottom: 8px;
+}
+
+.produit-tagline {
+  font-size: 12px;
+  color: var(--bleu-profond);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.produit-desc {
+  font-size: 14px;
+  color: var(--texte-sec);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.produit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bleu-profond);
+  transition: var(--transition);
+}
+
+.produit-card:hover .produit-link { gap: 10px; }
+
+.produit-link svg { width: 14px; height: 14px; }
+
+.produit-link-disabled { color: var(--gris-moyen); cursor: default; }
+
+.produits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .produits-grid { grid-template-columns: 1fr; }
+}

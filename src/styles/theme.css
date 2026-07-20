@@ -1,0 +1,367 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  background: var(--bleu-profond);
+  color: var(--blanc);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+:root {
+  /* Palette officielle NovafriQ Groupe */
+  --bleu-profond: #010E4F;
+  --cyan: #27C6D9;
+  --blanc: #FFFFFF;
+  --gris-clair: #F6F7FB;
+  --corps: #000000;
+
+  /* Alias legacy conservés pour éviter de retoucher chaque fichier consommateur : */
+  --noir: var(--bleu-profond);   /* chrome sombre : nav, footer, sections importantes */
+  --or: var(--cyan);              /* accent : icônes, liens actifs, bordures interactives */
+  --or-dark: var(--bleu-profond); /* accent texte foncé (wordmarks, citations) */
+  --texte: var(--bleu-profond);   /* titres */
+  --texte-sec: rgba(0,0,0,0.62);  /* texte de support, dérivé du noir officiel */
+  --gris-leger: var(--gris-clair);
+  --gris-moyen: #94A3B8;
+  --gris-fonce: #000833;
+  --bordure: #E1E5F0;
+  --header-h: 72px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--blanc);
+  color: var(--corps);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout de base */
+.page {
+  min-height: 100vh;
+  padding-top: var(--header-h);
+}
+
+.section {
+  padding: 96px 48px;
+}
+
+.section-light { background: var(--blanc); }
+.section-gray { background: var(--gris-leger); }
+.section-dark { background: var(--noir); }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--bleu-profond);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--cyan);
+}
+
+/* Sur fond sombre (section-dark), le texte cyan garde un excellent contraste */
+.section-label.light {
+  color: var(--cyan);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  color: var(--texte);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.section-title.light { color: var(--blanc); }
+
+.section-intro {
+  font-size: 17px;
+  color: var(--texte-sec);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 56px;
+}
+
+.section-intro.light { color: rgba(255,255,255,0.6); }
+
+/* Boutons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bleu-profond);
+  color: var(--blanc);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  background: var(--cyan);
+  color: var(--bleu-profond);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--blanc);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1.5px solid var(--cyan);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.btn-secondary:hover {
+  background: var(--cyan);
+  color: var(--bleu-profond);
+}
+
+/* Variante pour usage sur fond clair (section-light / section-gray) */
+.btn-secondary.on-light {
+  color: var(--bleu-profond);
+}
+
+.btn-secondary.on-light:hover {
+  background: var(--cyan);
+  color: var(--bleu-profond);
+}
+
+/* Placeholder images (en attendant les vrais visuels) */
+.placeholder-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--gris-leger);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--gris-moyen);
+  border: 2px dashed var(--bordure);
+  overflow: hidden;
+  position: relative;
+}
+
+.placeholder-img.banner { aspect-ratio: 16/6; border-radius: 12px; }
+.placeholder-img.square { aspect-ratio: 1/1; }
+.placeholder-img.wide { aspect-ratio: 16/9; }
+
+.placeholder-img svg { width: 40px; height: 40px; opacity: 0.4; }
+
+.placeholder-img span {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.placeholder-img .ph-dim { font-size: 11px; opacity: 0.4; }
+
+/* Grille de valeurs (réutilisée sur Vision et Fondateur) */
+.valeurs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.valeurs-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.valeur-item {
+  background: var(--gris-leger);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--bordure);
+}
+
+.valeur-icon {
+  width: 36px; height: 36px;
+  background: var(--cyan);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.valeur-icon svg {
+  width: 18px; height: 18px;
+  stroke: var(--bleu-profond);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.valeur-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texte);
+  margin-bottom: 6px;
+}
+
+.valeur-desc {
+  font-size: 13px;
+  color: var(--texte-sec);
+  line-height: 1.6;
+}
+
+/* Hero de page interne (Vision, Produits, Fondateur, Équipe, Carrières, Partenaires) */
+.hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(39,198,217,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(39,198,217,0.05) 0%, transparent 40%);
+}
+
+.page-hero {
+  background: var(--noir);
+  padding: 72px 48px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(39,198,217,0.3), transparent);
+}
+
+.page-hero .container { position: relative; z-index: 1; }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 24px;
+  cursor: default;
+}
+
+.breadcrumb span { color: var(--or); }
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--blanc);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.page-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.55);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .section { padding: 64px 24px; }
+  .valeurs-grid { grid-template-columns: 1fr 1fr; }
+  .valeurs-grid.cols-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .valeurs-grid { grid-template-columns: 1fr; }
+  .valeurs-grid.cols-3 { grid-template-columns: 1fr; }
+}
+
+/* Statuts produit (badges "En ligne" / "À venir") — partagés par ProduitCard et les cartes Actualités */
+.produit-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-live {
+  background: rgba(39,198,217,0.15);
+  color: var(--bleu-profond);
+  border: 1px solid rgba(39,198,217,0.4);
+}
+
+.status-coming {
+  background: rgba(1,14,79,0.06);
+  color: var(--bleu-profond);
+  border: 1px solid rgba(1,14,79,0.15);
+}
+
+/* Révélation au scroll — utilisée par Timeline, PoleCard, StatCounter, etc. */
+.reveal { opacity: 0; }
+.reveal.in-view { animation: fadeUp 0.7s cubic-bezier(0.4,0,0.2,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; }
+}
