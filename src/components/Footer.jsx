@@ -60,8 +60,6 @@ export default function Footer() {
             <li><Link to="/contact">Nous écrire</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
             <li><Link to="/carrieres">Carrières</Link></li>
-            <li><Link to="/partenaires">Partenariats</Link></li>
-            <li><a href="mailto:direction@novafriq.africa">direction@novafriq.africa</a></li>
           </ul>
         </div>
 
