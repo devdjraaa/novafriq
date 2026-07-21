@@ -12,7 +12,7 @@ const CATEGORIES = [
   },
   {
     name: 'Vie du groupe',
-    desc: "Recrutements, partenariats, jalons franchis — ce qui se passe du côté de l'équipe NovafriQ.",
+    desc: "Recrutements, partenariats, jalons franchis : ce qui se passe du côté de l'équipe NovafriQ.",
   },
   {
     name: 'Tribunes & analyses',

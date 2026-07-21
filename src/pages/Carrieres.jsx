@@ -16,7 +16,7 @@ function candidatureMailto(titre) {
 const POSTES = [
   { titre: 'Développeur Frontend React', lieu: 'Sèmè-Podji / Télétravail', type: 'Temps plein' },
   { titre: 'Développeur Backend Node.js / PHP', lieu: 'Sèmè-Podji / Télétravail', type: 'Temps plein' },
-  { titre: 'Community Manager — Mode & Culture africaine', lieu: 'Sèmè-Podji', type: 'Temps plein' },
+  { titre: 'Community Manager, Mode & Culture africaine', lieu: 'Sèmè-Podji', type: 'Temps plein' },
   { titre: 'Chef de Projet Digital', lieu: 'Sèmè-Podji', type: 'Temps plein' },
 ]
 

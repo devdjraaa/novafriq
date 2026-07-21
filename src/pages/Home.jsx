@@ -107,6 +107,16 @@ const PILIERS = [
       </>
     ),
   },
+  {
+    name: 'Technologies industrielles & Équipements',
+    desc: "Conception et intégration d'équipements technologiques pour renforcer la souveraineté technologique africaine.",
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </>
+    ),
+  },
 ]
 
 export default function Home() {
@@ -148,7 +158,7 @@ export default function Home() {
 
         <div className="hero-stats">
           <StatCounter value={1} label="Produit actif" />
-          <StatCounter value={4} label="Piliers stratégiques" />
+          <StatCounter value={5} label="Piliers stratégiques" />
           <div className="hero-stat">
             <span className="hero-stat-num">∞</span>
             <span className="hero-stat-label">Ambition africaine</span>
@@ -161,8 +171,8 @@ export default function Home() {
           <div className="qui-sommes-nous">
             <div className="section-label">Qui sommes-nous ?</div>
             <h2 className="section-title">Un groupe technologique<br />panafricain, né au Bénin.</h2>
-            <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales — adaptés à leur contexte, pas simplement importés.</p>
-            <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires — produits, formation, conseil et technologies industrielles — pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
+            <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales, adaptés à leur contexte, pas simplement importés.</p>
+            <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires (produits, formation, conseil et technologies industrielles) pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
             <Link className="btn-secondary on-light" to="/vision">Découvrir notre vision <ArrowRightIcon /></Link>
           </div>
         </div>
@@ -171,8 +181,8 @@ export default function Home() {
       <section className="section section-gray">
         <div className="container">
           <div className="section-label">Nos domaines</div>
-          <h2 className="section-title">Quatre piliers.<br />Un écosystème.</h2>
-          <p className="section-intro">NovafriQ intervient là où le numérique peut transformer durablement la vie des Africains : le commerce, la finance, le savoir et les outils métier.</p>
+          <h2 className="section-title">Cinq piliers.<br />Un écosystème.</h2>
+          <p className="section-intro">NovafriQ intervient là où le numérique peut transformer durablement la vie des Africains : le commerce, la finance, le savoir, les outils métier et l'industrie.</p>
 
           <div className="piliers-grid">
             {PILIERS.map((p, i) => (
@@ -216,7 +226,7 @@ export default function Home() {
         <div className="container">
           <div className="section-label">Notre flagship</div>
           <h2 className="section-title">Gextimo, notre premier<br />produit en ligne.</h2>
-          <p className="section-intro">La marketplace dédiée aux créateurs de mode africains — designers, tailleurs et artisans.</p>
+          <p className="section-intro">La marketplace dédiée aux créateurs de mode africains : designers, tailleurs et artisans.</p>
 
           <div className="produit-apercu">
             <div>
@@ -231,7 +241,7 @@ export default function Home() {
                 La première marketplace panafricaine dédiée aux créateurs de mode. Gextimo connecte designers, tailleurs et artisans à une clientèle qui valorise l'authenticité et le savoir-faire africain.
               </p>
               <p className="produit-apercu-quote">
-                "Créez — Gérez — Rayonnez."
+                "Créez, gérez, rayonnez."
               </p>
               <a className="btn-primary" href="https://gextimo.novafriq.africa" target="_blank" rel="noreferrer">
                 Visiter Gextimo

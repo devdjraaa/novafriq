@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: 'Combien de temps dure un projet avec NovafriQ ?',
-    a: 'Cela dépend de l\'ampleur du projet. Notre méthode en six étapes — écoute, analyse, conception, développement, déploiement, accompagnement — permet d\'estimer un calendrier précis dès les premiers échanges.',
+    a: 'Cela dépend de l\'ampleur du projet. Notre méthode en six étapes (écoute, analyse, conception, développement, déploiement, accompagnement) permet d\'estimer un calendrier précis dès les premiers échanges.',
   },
   {
     q: 'NovafriQ propose-t-il de la formation ?',

@@ -20,18 +20,18 @@ export default function Fondateur() {
           <div className="fondateur-layout">
             <div className="fondateur-photo">
               <div className="fondateur-img-wrap">
-                <PlaceholderImg icon={<PersonIcon />} label="Photo du fondateur" dim="Portrait — 600 × 800 px" />
+                <PlaceholderImg icon={<PersonIcon />} label="Photo du fondateur" dim="Portrait, 600 × 800 px" />
               </div>
               <div className="fondateur-name-card">
                 <div className="fondateur-name">Patrick Dona Adjaho</div>
-                <div className="fondateur-title">Président & Fondateur — NovafriQ Groupe SAS</div>
+                <div className="fondateur-title">Président & Fondateur, NovafriQ Groupe SAS</div>
               </div>
             </div>
 
             <div className="fondateur-content">
               <h3>"J'ai voulu construire les outils que j'aurais aimé avoir en tant qu'entrepreneur africain."</h3>
               <p>NovafriQ est né d'une frustration productive. En cherchant des solutions numériques adaptées aux entrepreneurs d'Afrique francophone, j'ai constaté un vide : des outils génériques pensés ailleurs, importés sans adaptation, souvent trop coûteux ou trop complexes pour la réalité du terrain.</p>
-              <p>La réponse n'était pas de s'adapter à ces outils. C'était d'en construire de meilleurs — des solutions nées ici, pensées ici, et déployées pour servir les créateurs, entrepreneurs et professionnels africains avec le niveau d'exigence qu'ils méritent.</p>
+              <p>La réponse n'était pas de s'adapter à ces outils. C'était d'en construire de meilleurs : des solutions nées ici, pensées ici, et déployées pour servir les créateurs, entrepreneurs et professionnels africains avec le niveau d'exigence qu'ils méritent.</p>
               <p>Gextimo est le premier produit de cet écosystème. Il y en aura d'autres. Notre ambition est de bâtir, produit après produit, un groupe technologique qui fait la fierté du continent.</p>
 
               <div className="valeurs-grid">

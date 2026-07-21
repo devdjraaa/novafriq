@@ -22,7 +22,7 @@ export default function Contact() {
           <div className="contact-layout">
             <div className="contact-info">
               <h3>Une question, une opportunité, un projet ?</h3>
-              <p>Que vous soyez investisseur, partenaire potentiel, candidat ou simplement curieux de ce que nous construisons — nous répondons à chaque message.</p>
+              <p>Que vous soyez investisseur, partenaire potentiel, candidat ou simplement curieux de ce que nous construisons, nous répondons à chaque message.</p>
 
               <div className="contact-details">
                 <div className="contact-detail">
