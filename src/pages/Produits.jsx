@@ -194,7 +194,7 @@ export default function Produits() {
 
           <div className="gextimo-spotlight-layout">
             <div className="gextimo-shots">
-              <PlaceholderImg variant="wide" label="Écran d'accueil Gextimo" dim="Aperçu — 1200 × 750 px" />
+              <PlaceholderImg variant="wide" label="Écran d'accueil Gextimo" dim="Aperçu, 1200 × 750 px" />
               <div className="gextimo-shots-row">
                 <PlaceholderImg variant="square" label="Boutique créateur" />
                 <PlaceholderImg variant="square" label="Suivi des commandes" />

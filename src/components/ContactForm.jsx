@@ -39,7 +39,7 @@ export default function ContactForm() {
       })
 
       if (response.ok) {
-        showToast('Message envoyé — nous vous répondrons sous 48h.')
+        showToast('Message envoyé, nous vous répondrons sous 48h.')
         setForm(EMPTY_FORM)
         setFailed(false)
       } else {
@@ -47,7 +47,7 @@ export default function ContactForm() {
         setFailed(true)
       }
     } catch {
-      showToast('Erreur réseau — utilisez le lien ci-dessous pour nous écrire directement.')
+      showToast('Erreur réseau. Utilisez le lien ci-dessous pour nous écrire directement.')
       setFailed(true)
     } finally {
       setSending(false)

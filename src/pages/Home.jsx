@@ -171,8 +171,8 @@ export default function Home() {
           <div className="qui-sommes-nous">
             <div className="section-label">Qui sommes-nous ?</div>
             <h2 className="section-title">Un groupe technologique<br />panafricain, né au Bénin.</h2>
-            <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales — adaptés à leur contexte, pas simplement importés.</p>
-            <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires — produits, formation, conseil et technologies industrielles — pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
+            <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales, adaptés à leur contexte, pas simplement importés.</p>
+            <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires (produits, formation, conseil et technologies industrielles) pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
             <Link className="btn-secondary on-light" to="/vision">Découvrir notre vision <ArrowRightIcon /></Link>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function Home() {
         <div className="container">
           <div className="section-label">Notre flagship</div>
           <h2 className="section-title">Gextimo, notre premier<br />produit en ligne.</h2>
-          <p className="section-intro">La marketplace dédiée aux créateurs de mode africains — designers, tailleurs et artisans.</p>
+          <p className="section-intro">La marketplace dédiée aux créateurs de mode africains : designers, tailleurs et artisans.</p>
 
           <div className="produit-apercu">
             <div>
@@ -241,7 +241,7 @@ export default function Home() {
                 La première marketplace panafricaine dédiée aux créateurs de mode. Gextimo connecte designers, tailleurs et artisans à une clientèle qui valorise l'authenticité et le savoir-faire africain.
               </p>
               <p className="produit-apercu-quote">
-                "Créez — Gérez — Rayonnez."
+                "Créez, gérez, rayonnez."
               </p>
               <a className="btn-primary" href="https://gextimo.novafriq.africa" target="_blank" rel="noreferrer">
                 Visiter Gextimo

@@ -106,7 +106,7 @@ const ENGAGEMENTS = [
   },
   {
     name: 'Confiance & sécurité',
-    desc: 'La conformité légale et la protection des données ne sont pas des contraintes pour nous — elles sont des fondements.',
+    desc: 'La conformité légale et la protection des données ne sont pas des contraintes pour nous : elles sont des fondements.',
     icon: (
       <>
         <rect x="3" y="11" width="18" height="11" rx="2" />
@@ -153,12 +153,12 @@ export default function Vision() {
 
               <p>NovafriQ est né d'un constat simple : les solutions numériques disponibles sur le marché africain sont rarement pensées pour ses réalités. Elles ignorent les contraintes de connectivité, les habitudes de paiement, les langues locales et les dynamiques communautaires qui font la richesse de ce continent.</p>
               <p>Nous construisons différemment. Chaque produit NovafriQ part du terrain, des besoins réels des entrepreneurs, créateurs, apprenants et professionnels africains. Nous croyons que la technologie n'a de valeur que si elle est adoptée, et qu'elle n'est adoptée que si elle répond à une réalité vécue.</p>
-              <p>Notre ambition est de devenir le groupe technologique de référence en Afrique francophone et au-delà — en faisant de chaque produit un levier de souveraineté numérique pour ceux qui l'utilisent.</p>
+              <p>Notre ambition est de devenir le groupe technologique de référence en Afrique francophone et au-delà, en faisant de chaque produit un levier de souveraineté numérique pour ceux qui l'utilisent.</p>
             </div>
 
             <div className="vision-image">
               <div className="fondateur-img-wrap">
-                <PlaceholderImg label="Photo ou visuel" dim="Portrait ou illustration — 600 × 800 px" />
+                <PlaceholderImg label="Photo ou visuel" dim="Portrait ou illustration, 600 × 800 px" />
                 <div className="vision-badge">
                   <span className="vision-badge-num">2024</span>
                   <span className="vision-badge-txt">Année de création</span>
@@ -192,7 +192,7 @@ export default function Vision() {
         <div className="container">
           <div className="section-label">Notre mission</div>
           <h2 className="section-title">Bâtir l'écosystème technologique<br />de référence en Afrique.</h2>
-          <p className="section-intro">Notre mission est de concevoir, développer et déployer des solutions numériques qui répondent aux besoins réels du continent — et de former les talents qui les feront vivre. Nous avançons sur cinq fronts complémentaires : innovation, formation, logiciels, communication et technologies industrielles.</p>
+          <p className="section-intro">Notre mission est de concevoir, développer et déployer des solutions numériques qui répondent aux besoins réels du continent, et de former les talents qui les feront vivre. Nous avançons sur cinq fronts complémentaires : innovation, formation, logiciels, communication et technologies industrielles.</p>
         </div>
       </section>
 
