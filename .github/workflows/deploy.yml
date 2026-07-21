@@ -89,17 +89,33 @@ jobs:
             sudo nginx -t; exit 1
           fi
 
-          if [ ! -d "/etc/letsencrypt/live/$DOMAIN" ]; then
-            if command -v certbot > /dev/null; then
-              echo "→ Génération SSL..."
-              sudo certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m dev.djraaa@gmail.com --redirect
-              echo "✅ SSL activé"
-            else
-              echo "⏭️  certbot absent"
-            fi
+          # ⚠️ /etc/letsencrypt est en 700 : l'utilisateur de déploiement ne peut
+          # PAS y lire. `[ ! -d ... ]` était donc toujours vrai, et certbot
+          # tournait à CHAQUE déploiement — un hoquet de sa part faisait alors
+          # échouer toute la mise en ligne, comme le 21/07 où le site est resté
+          # sur son ancienne version sans que rien ne le dise.
+          #
+          # On teste la présence du certificat avec `cp`, seule commande
+          # autorisée par sudoers pour lire un fichier root (avec nginx,
+          # certbot, ln, chown et systemctl reload — ni test, ni grep, ni cat).
+          if sudo cp "/etc/letsencrypt/live/$DOMAIN/fullchain.pem" /dev/null 2>/dev/null; then
+            echo "→ Certificat déjà en place."
+          elif command -v certbot > /dev/null; then
+            echo "→ Émission du certificat…"
+            sudo certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos \
+                 -m dev.djraaa@gmail.com --redirect \
+              || echo "⚠️  Émission non aboutie — le site reste servi en HTTP."
           else
-            echo "→ SSL déjà présent"
+            echo "⏭️  certbot absent — le site restera en HTTP."
           fi
+
+          # Contrôle final : le site doit RÉPONDRE, pas seulement être configuré.
+          CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 "https://$DOMAIN/" || echo 000)
+          if [ "$CODE" = "000" ]; then
+            echo "❌ https://$DOMAIN ne répond pas."
+            exit 1
+          fi
+          echo "✅ https://$DOMAIN répond ($CODE)."
           ENGNX
 
       - name: Deploy dist to VPS
