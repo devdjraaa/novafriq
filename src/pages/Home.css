@@ -56,13 +56,6 @@
   max-width: 38vw;
 }
 
-.hero-illustration-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(1, 14, 79, 0.18));
-}
-
 .hero-content {
   position: relative;
   max-width: 760px;
@@ -235,6 +228,27 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.produit-logo-card {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -24px rgba(1, 14, 79, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.produit-logo-card img {
+  max-width: 65%;
+  max-height: 65%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .produit-apercu-title {

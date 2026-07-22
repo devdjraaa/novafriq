@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRightIcon, ExternalLinkIcon } from '../components/icons'
-import PlaceholderImg from '../components/PlaceholderImg'
 import StatCounter from '../components/StatCounter'
+import AfriqueConstellation from '../components/AfriqueConstellation'
 import Reveal from '../components/Reveal'
 import useInViewport from '../hooks/useInViewport'
 import useDocumentMeta from '../hooks/useDocumentMeta'
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
 
         <div className="hero-illustration" aria-hidden="true">
-          <img src="/hero/afrique-carte.png" alt="" className="hero-illustration-img" />
+          <AfriqueConstellation />
         </div>
 
         <div className="hero-stats">
@@ -229,7 +229,9 @@ export default function Home() {
 
           <div className="produit-apercu">
             <div>
-              <PlaceholderImg variant="wide" label="Bannière Gextimo" dim="1200 × 450 px recommandé" />
+              <div className="produit-logo-card">
+                <img src="/logo/Logo_Gextimo.png" alt="Gextimo" />
+              </div>
             </div>
             <div>
               <div className="produit-apercu-title">
