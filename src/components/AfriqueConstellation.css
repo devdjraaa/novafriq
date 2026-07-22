@@ -8,7 +8,8 @@
 .ac-glow {
   position: absolute;
   inset: 0;
-  background: var(--cyan);
+  background:
+    radial-gradient(circle at 78% 12%, rgba(39, 198, 217, 0.55) 0%, rgba(39, 198, 217, 0.16) 45%, rgba(1, 14, 79, 0.05) 100%);
   -webkit-mask-image: url('/hero/afrique-masque.png');
   mask-image: url('/hero/afrique-masque.png');
   -webkit-mask-size: contain;
@@ -20,14 +21,14 @@
 }
 
 .ac-bloom {
-  filter: blur(30px);
-  opacity: 0.3;
-  transform: scale(1.05);
+  filter: blur(36px);
+  opacity: 0.4;
+  transform: scale(1.08);
 }
 
 .ac-glow {
-  filter: blur(1px);
-  opacity: 0.16;
+  filter: blur(7px);
+  opacity: 0.5;
 }
 
 .ac-svg {
