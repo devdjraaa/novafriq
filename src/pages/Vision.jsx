@@ -62,7 +62,7 @@ const POLES = [
 ]
 
 const ROADMAP = [
-  { marker: '2024', title: 'Création de NovafriQ', desc: 'Naissance officielle du groupe à Sèmè-Podji, Bénin.' },
+  { marker: '2024', title: 'Idéation de NovafriQ', desc: 'Naissance de l\'idée du groupe à Sèmè-Podji, Bénin.' },
   { marker: '2025', title: 'Lancement de Gextimo', desc: 'Ouverture publique de notre marketplace mode & artisanat.' },
   { marker: '2026', title: 'Développement des services', desc: 'Élargissement de l\'offre : SaaS métier, IA, cybersécurité, conseil.' },
   { marker: '2027', title: 'Centre de formation', desc: 'Ouverture d\'un centre dédié aux talents technologiques africains.' },

@@ -52,7 +52,15 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 0;
-  opacity: 0.9;
+  width: 460px;
+  max-width: 38vw;
+}
+
+.hero-illustration-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(1, 14, 79, 0.18));
 }
 
 .hero-content {
