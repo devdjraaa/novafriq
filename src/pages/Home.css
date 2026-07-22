@@ -230,25 +230,19 @@
   align-items: center;
 }
 
-.produit-logo-card {
+.produit-cover-card {
   width: 100%;
-  aspect-ratio: 16/9;
-  background: var(--blanc);
-  border: 1px solid var(--bordure);
+  aspect-ratio: 1942/809;
   border-radius: 16px;
+  overflow: hidden;
   box-shadow: 0 20px 40px -24px rgba(1, 14, 79, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
 }
 
-.produit-logo-card img {
-  max-width: 65%;
-  max-height: 65%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+.produit-cover-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .produit-apercu-title {

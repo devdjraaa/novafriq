@@ -229,8 +229,8 @@ export default function Home() {
 
           <div className="produit-apercu">
             <div>
-              <div className="produit-logo-card">
-                <img src="/logo/Logo_Gextimo.png" alt="Gextimo" />
+              <div className="produit-cover-card">
+                <img src="/logo/Couverture_Gextimo_1.png" alt="Gextimo — la plateforme des créateurs de mode africains" />
               </div>
             </div>
             <div>
