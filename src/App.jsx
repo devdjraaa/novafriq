@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastProvider } from './components/ToastContext'
+import { ContenuProvider } from './contenu/ContenuContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Vision from './pages/Vision'
@@ -25,8 +26,9 @@ const AdminApp = lazy(() => import('./admin/AdminApp'))
 
 function App() {
   return (
-    <ToastProvider>
-      <BrowserRouter>
+    <ContenuProvider>
+      <ToastProvider>
+        <BrowserRouter>
         <Routes>
           {/* Le back-office est hors du gabarit public : il a sa propre
               barre latérale, et l'en-tête du site n'a rien à y faire. */}
@@ -52,8 +54,9 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </ToastProvider>
+        </BrowserRouter>
+      </ToastProvider>
+    </ContenuProvider>
   )
 }
 

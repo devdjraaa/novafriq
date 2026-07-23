@@ -1,0 +1,782 @@
+{
+  "reglages": {
+    "site.nom": "NovafriQ Groupe SAS",
+    "site.accroche": "Construire l'Afrique numérique",
+    "site.description": "NovafriQ Groupe SAS est un groupe technologique panafricain qui conçoit, développe et déploie des plateformes numériques à fort impact pour les entrepreneurs, créateurs et professionnels africains.",
+    "contact.email": "direction@novafriq.africa",
+    "contact.telephone": "+229 01 91 47 96 28",
+    "contact.site": "www.novafriq.africa",
+    "contact.siege": "Sèmè-Podji, Agblangandan, République du Bénin",
+    "contact.carte": "Sèmè-Podji, Agblangandan, Bénin",
+    "social.linkedin": "https://www.linkedin.com/company/novafriqgrp/",
+    "social.facebook": "https://www.facebook.com/share/1BRvEVR24S/",
+    "accueil.hero.surtitre": "NovafriQ Groupe SAS",
+    "accueil.hero.titre": "Nous construisons\nles outils numériques\nde l'Afrique de demain.",
+    "accueil.hero.accent": "l'Afrique de demain.",
+    "accueil.hero.soustitre": "NovafriQ est un groupe technologique panafricain qui conçoit, développe et déploie des plateformes numériques à fort impact pour les entrepreneurs, créateurs et professionnels africains.",
+    "accueil.hero.bouton1": "Découvrir nos produits",
+    "accueil.hero.bouton1_lien": "/produits",
+    "accueil.hero.bouton2": "Notre vision",
+    "accueil.hero.bouton2_lien": "/vision",
+    "accueil.stat1_valeur": "1",
+    "accueil.stat1_libelle": "Produit actif",
+    "accueil.stat2_valeur": "5",
+    "accueil.stat2_libelle": "Piliers stratégiques",
+    "accueil.stat3_valeur": "∞",
+    "accueil.stat3_libelle": "Ambition africaine",
+    "accueil.qui.label": "Qui sommes-nous ?",
+    "accueil.qui.titre": "Un groupe technologique\npanafricain, né au Bénin.",
+    "accueil.qui.texte1": "NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales, adaptés à leur contexte, pas simplement importés.",
+    "accueil.qui.texte2": "Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires (produits, formation, conseil et technologies industrielles) pour bâtir, à terme, l'écosystème technologique de référence en Afrique.",
+    "accueil.qui.bouton": "Découvrir notre vision",
+    "accueil.piliers.label": "Nos domaines",
+    "accueil.piliers.titre": "Cinq piliers.\nUn écosystème.",
+    "accueil.piliers.intro": "NovafriQ intervient là où le numérique peut transformer durablement la vie des Africains : le commerce, la finance, le savoir, les outils métier et l'industrie.",
+    "accueil.pourquoi.label": "Pourquoi NovafriQ",
+    "accueil.pourquoi.titre": "Pourquoi choisir\nNovafriQ.",
+    "accueil.pourquoi.intro": "Ce qui distingue notre approche des autres prestataires numériques du continent.",
+    "accueil.vedette.label": "Notre flagship",
+    "accueil.vedette.titre": "Gextimo, notre premier\nproduit en ligne.",
+    "accueil.vedette.intro": "La marketplace dédiée aux créateurs de mode africains : designers, tailleurs et artisans.",
+    "accueil.vedette.description": "La première marketplace panafricaine dédiée aux créateurs de mode. Gextimo connecte designers, tailleurs et artisans à une clientèle qui valorise l'authenticité et le savoir-faire africain.",
+    "accueil.cta.label": "Travaillons ensemble",
+    "accueil.cta.titre": "Vous avez un projet.\nNous avons les outils.",
+    "accueil.cta.texte": "Que vous soyez investisseur, partenaire stratégique ou entrepreneur, NovafriQ est ouvert à toute collaboration porteuse d'impact.",
+    "accueil.cta.bouton": "Prendre contact",
+    "vision.hero.fil": "Notre Vision",
+    "vision.hero.titre": "Pourquoi NovafriQ existe.",
+    "vision.hero.soustitre": "Une conviction profonde : l'Afrique n'a pas besoin de copier. Elle a besoin d'outils conçus pour elle, par elle.",
+    "vision.raison.label": "Notre raison d'être",
+    "vision.raison.titre": "Bâtir l'infrastructure numérique de l'Afrique.",
+    "vision.citation": "L'Afrique est le continent qui compte le plus grand nombre de jeunes au monde. Leur donner les bons outils numériques, c'est libérer une énergie sans équivalent.",
+    "vision.citation_auteur": "Patrick Dona Adjaho, Président & Fondateur, NovafriQ Groupe SAS",
+    "vision.texte1": "NovafriQ est né d'un constat simple : les solutions numériques disponibles sur le marché africain sont rarement pensées pour ses réalités. Elles ignorent les contraintes de connectivité, les habitudes de paiement, les langues locales et les dynamiques communautaires qui font la richesse de ce continent.",
+    "vision.texte2": "Nous construisons différemment. Chaque produit NovafriQ part du terrain, des besoins réels des entrepreneurs, créateurs, apprenants et professionnels africains. Nous croyons que la technologie n'a de valeur que si elle est adoptée, et qu'elle n'est adoptée que si elle répond à une réalité vécue.",
+    "vision.texte3": "Notre ambition est de devenir le groupe technologique de référence en Afrique francophone et au-delà, en faisant de chaque produit un levier de souveraineté numérique pour ceux qui l'utilisent.",
+    "vision.badge_valeur": "2024",
+    "vision.badge_libelle": "Année de création",
+    "vision.engagements.label": "Nos engagements",
+    "vision.engagements.titre": "Ce en quoi nous croyons.",
+    "vision.mission.label": "Notre mission",
+    "vision.mission.titre": "Bâtir l'écosystème technologique\nde référence en Afrique.",
+    "vision.mission.intro": "Notre mission est de concevoir, développer et déployer des solutions numériques qui répondent aux besoins réels du continent, et de former les talents qui les feront vivre. Nous avançons sur cinq fronts complémentaires : innovation, formation, logiciels, communication et technologies industrielles.",
+    "vision.poles.label": "Notre organisation",
+    "vision.poles.titre": "Cinq pôles stratégiques.",
+    "vision.poles.intro": "Chaque pôle porte une part de notre mission et avance selon son propre rythme, au service d'une même ambition.",
+    "vision.route.label": "Notre feuille de route",
+    "vision.route.titre": "De 2026 à l'expansion\ncontinentale.",
+    "vision.route.intro": "Les grandes étapes qui jalonnent la construction du groupe.",
+    "produits.hero.fil": "Nos Produits",
+    "produits.hero.titre": "Notre portefeuille\nde produits.",
+    "produits.hero.soustitre": "Chaque produit NovafriQ est une réponse précise à un besoin réel. Gextimo est le premier. D'autres suivront.",
+    "produits.detail.label": "Notre premier produit",
+    "produits.detail.titre": "Gextimo, en détail.",
+    "produits.detail.intro": "Un aperçu de ce que Gextimo apporte aux créateurs de mode et artisans africains.",
+    "produits.detail.slogan": "Créez, gérez, rayonnez.",
+    "produits.detail.benefices": "Gextimo donne aux créateurs une visibilité auprès d'une clientèle panafricaine et internationale, des outils de gestion pensés pour les réalités du terrain, et un accompagnement dans la croissance de leur activité.",
+    "produits.services.label": "Nos services",
+    "produits.services.titre": "Au-delà des produits,\nune expertise complète.",
+    "produits.services.intro": "NovafriQ accompagne aussi les organisations qui veulent construire leurs propres solutions numériques.",
+    "produits.methode.label": "Notre méthode",
+    "produits.methode.titre": "Comment nous travaillons.",
+    "produits.methode.intro": "Une méthode claire, en six étapes, appliquée à chaque projet quelle que soit son ampleur.",
+    "produits.cta.label": "Vous construisez quelque chose ?",
+    "produits.cta.titre": "Rejoignez l'écosystème NovafriQ.",
+    "produits.cta.texte": "Si vous avez un projet numérique à fort potentiel pour l'Afrique, nous sommes ouverts à la discussion.",
+    "produits.cta.bouton": "Discutons de votre projet",
+    "fondateur.hero.fil": "Le Fondateur",
+    "fondateur.hero.titre": "Pourquoi NovafriQ\na été fondé.",
+    "fondateur.hero.soustitre": "L'histoire derrière le groupe, racontée par son fondateur.",
+    "fondateur.nom": "Patrick Dona Adjaho",
+    "fondateur.titre": "Président & Fondateur, NovafriQ Groupe SAS",
+    "fondateur.citation": "J'ai voulu construire les outils que j'aurais aimé avoir en tant qu'entrepreneur africain.",
+    "fondateur.texte1": "NovafriQ est né d'une frustration productive. En cherchant des solutions numériques adaptées aux entrepreneurs d'Afrique francophone, j'ai constaté un vide : des outils génériques pensés ailleurs, importés sans adaptation, souvent trop coûteux ou trop complexes pour la réalité du terrain.",
+    "fondateur.texte2": "La réponse n'était pas de s'adapter à ces outils. C'était d'en construire de meilleurs : des solutions nées ici, pensées ici, et déployées pour servir les créateurs, entrepreneurs et professionnels africains avec le niveau d'exigence qu'ils méritent.",
+    "fondateur.texte3": "Gextimo est le premier produit de cet écosystème. Il y en aura d'autres. Notre ambition est de bâtir, produit après produit, un groupe technologique qui fait la fierté du continent.",
+    "equipe.hero.fil": "Notre équipe",
+    "equipe.hero.titre": "Les personnes qui\nbâtissent NovafriQ.",
+    "equipe.hero.soustitre": "Quatre profils, une seule conviction : construire les outils que l'Afrique mérite.",
+    "equipe.intro.label": "Équipe de démarrage",
+    "equipe.intro.titre": "Ceux qui ont dit oui\ndès le premier jour.",
+    "equipe.intro.texte": "Avant les investisseurs, avant les premiers clients, avant la notoriété, il y avait une équipe. Ces quatre personnes ont choisi NovafriQ quand c'était encore une idée sur papier. Leurs rôles évolueront avec le groupe ; leurs noms resteront associés à son origine.",
+    "equipe.note": "Cette page est mise à jour au fil du temps. Les postes, photos et descriptions évoluent avec la croissance du groupe. Chaque membre de l'équipe est consulté avant toute modification qui le concerne.",
+    "carrieres.hero.fil": "Carrières",
+    "carrieres.hero.titre": "Rejoignez l'équipe\nNovafriQ.",
+    "carrieres.hero.soustitre": "Nous cherchons des personnes qui veulent construire, pas seulement travailler.",
+    "carrieres.pourquoi.label": "Pourquoi nous rejoindre",
+    "carrieres.pourquoi.titre": "Un terrain de jeu unique.",
+    "carrieres.pourquoi.texte": "Chez NovafriQ, chaque membre de l'équipe a un impact direct sur les produits que des milliers d'Africains utilisent. Nous sommes une startup en croissance, avec les avantages qui vont avec : liberté, responsabilité, impact réel.",
+    "carrieres.postes.label": "Postes ouverts",
+    "carrieres.postes.titre": "Offres actuelles",
+    "carrieres.postes.vide": "Aucun poste n'est ouvert en ce moment. Vous pouvez nous envoyer une candidature spontanée : nous lisons chaque message.",
+    "carrieres.spontanee.titre": "Candidature spontanée",
+    "carrieres.spontanee.texte": "Vous ne trouvez pas le poste qui correspond à votre profil ? Envoyez-nous votre candidature spontanée. Nous lisons chaque message.",
+    "carrieres.spontanee.bouton": "Envoyer ma candidature",
+    "partenaires.hero.fil": "Partenaires & Investisseurs",
+    "partenaires.hero.titre": "Construisons ensemble\nquelque chose de grand.",
+    "partenaires.hero.soustitre": "NovafriQ est ouvert à des partenariats stratégiques, des co-investissements et des collaborations à fort impact sur le continent africain.",
+    "partenaires.label": "Nos partenaires",
+    "partenaires.titre": "Ils nous font confiance.",
+    "partenaires.intro": "Les emplacements ci-dessous seront complétés au fil des partenariats officialisés.",
+    "partenaires.investisseurs.label": "Investisseurs",
+    "partenaires.investisseurs.titre": "Vous investissez dans le numérique africain ?",
+    "partenaires.investisseurs.texte": "NovafriQ recherche des partenaires financiers partageant notre vision long terme pour l'Afrique numérique. Nous sommes ouverts à toute discussion sérieuse.",
+    "partenaires.investisseurs.bouton": "Prendre contact",
+    "faq.hero.fil": "FAQ",
+    "faq.hero.titre": "Vos questions, nos réponses.",
+    "faq.hero.soustitre": "Tout ce qu'il faut savoir sur NovafriQ, nos produits et notre façon de travailler.",
+    "faq.cta.texte": "Vous ne trouvez pas la réponse à votre question ?",
+    "faq.cta.bouton": "Contactez-nous",
+    "actualites.hero.fil": "Actualités",
+    "actualites.hero.titre": "Les actualités NovafriQ.",
+    "actualites.hero.soustitre": "Les nouveautés produits, la vie du groupe et nos regards sur la tech africaine.",
+    "actualites.vide": "Aucun article publié pour le moment. Revenez bientôt.",
+    "actualites.cta.label": "Restons en contact",
+    "actualites.cta.titre": "Ne manquez aucune actualité.",
+    "actualites.cta.texte": "Suivez-nous sur les réseaux sociaux ou écrivez-nous directement.",
+    "actualites.cta.bouton": "Nous contacter",
+    "contact.hero.label": "Écrivez-nous",
+    "contact.hero.titre": "Nous sommes à votre écoute.",
+    "contact.intro.titre": "Une question, une opportunité, un projet ?",
+    "contact.intro.texte": "Que vous soyez investisseur, partenaire potentiel, candidat ou simplement curieux de ce que nous construisons, nous répondons à chaque message.",
+    "contact.objets": "Partenariat stratégique\nInvestissement\nRecrutement / Candidature\nPresse & Médias\nAutre demande",
+    "contact.succes": "Message envoyé, nous vous répondrons sous 48h.",
+    "contact.echec": "L'envoi a échoué. Vous pouvez nous écrire directement par e-mail.",
+    "footer.description": "NovafriQ est un groupe technologique panafricain qui conçoit et déploie des plateformes numériques à fort impact pour l'Afrique.",
+    "footer.copyright": "NovafriQ Groupe SAS. Tous droits réservés. Sèmè-Podji, Bénin.",
+    "footer.newsletter.titre": "Newsletter",
+    "footer.newsletter.texte": "Recevez nos actualités et l'avancée de nos produits.",
+    "footer.newsletter.bouton": "Bientôt disponible",
+    "seo.accueil.titre": "NovafriQ Groupe SAS — Construire l'Afrique numérique",
+    "seo.accueil.description": "NovafriQ Groupe SAS est un groupe technologique panafricain qui conçoit, développe et déploie des plateformes numériques à fort impact pour les entrepreneurs, créateurs et professionnels africains.",
+    "seo.vision.titre": "Notre Vision — NovafriQ Groupe SAS",
+    "seo.vision.description": "Une conviction profonde : l'Afrique n'a pas besoin de copier, elle a besoin d'outils conçus pour elle, par elle. Découvrez la vision, la mission et les engagements de NovafriQ.",
+    "seo.produits.titre": "Nos Produits — NovafriQ Groupe SAS",
+    "seo.produits.description": "Gextimo, la marketplace panafricaine dédiée aux créateurs de mode, et l'ensemble des services numériques (développement, IA, cybersécurité, conseil) proposés par NovafriQ.",
+    "seo.fondateur.titre": "Le Fondateur — NovafriQ Groupe SAS",
+    "seo.fondateur.description": "Patrick Dona Adjaho, Président & Fondateur de NovafriQ Groupe SAS, raconte l'histoire et la vision derrière le groupe technologique panafricain.",
+    "seo.equipe.titre": "Notre Équipe — NovafriQ Groupe SAS",
+    "seo.equipe.description": "Découvrez l'équipe fondatrice de NovafriQ Groupe SAS, à l'origine du groupe technologique panafricain.",
+    "seo.carrieres.titre": "Carrières — NovafriQ Groupe SAS",
+    "seo.carrieres.description": "Rejoignez l'équipe NovafriQ : découvrez nos postes ouverts et envoyez votre candidature spontanée.",
+    "seo.partenaires.titre": "Partenaires & Investisseurs — NovafriQ Groupe SAS",
+    "seo.partenaires.description": "NovafriQ est ouvert à des partenariats stratégiques, des co-investissements et des collaborations à fort impact sur le continent africain.",
+    "seo.faq.titre": "FAQ — NovafriQ Groupe SAS",
+    "seo.faq.description": "Toutes les réponses à vos questions sur NovafriQ, ses produits et sa façon de travailler.",
+    "seo.actualites.titre": "Actualités — NovafriQ Groupe SAS",
+    "seo.actualites.description": "Les actualités du groupe NovafriQ : nouveautés produits, vie du groupe et tribunes sur la tech africaine.",
+    "seo.contact.titre": "Contact — NovafriQ Groupe SAS",
+    "seo.contact.description": "Contactez NovafriQ Groupe SAS pour un partenariat, un investissement, une candidature ou toute autre demande.",
+    "contact.champ.prenom": "Prénom",
+    "contact.champ.prenom_indice": "Votre prénom",
+    "contact.champ.nom": "Nom",
+    "contact.champ.nom_indice": "Votre nom",
+    "contact.champ.email": "Email",
+    "contact.champ.email_indice": "votre@email.com",
+    "contact.champ.objet": "Objet",
+    "contact.champ.objet_indice": "Sélectionnez un objet",
+    "contact.champ.message": "Message",
+    "contact.champ.message_indice": "Décrivez votre projet, votre question ou votre opportunité...",
+    "contact.bouton": "Envoyer le message",
+    "contact.bouton_envoi": "Envoi en cours...",
+    "erreur404.titre": "Page introuvable",
+    "erreur404.texte": "Le lien que vous avez suivi est peut-être incorrect, ou la page a été déplacée.",
+    "erreur404.bouton": "Revenir à l'accueil"
+  },
+  "produits": [
+    {
+      "id": "019f8eb9-2514-72b2-beb5-57d995e89e64",
+      "slug": "gextimo",
+      "nom": "Gextimo",
+      "accroche": "Mode & Artisanat numérique",
+      "description": "La marketplace panafricaine qui connecte designers, tailleurs et artisans à leurs clients. Un espace pour créer, gérer et rayonner.",
+      "statut": "en_ligne",
+      "statut_libelle": "En ligne",
+      "lien": "https://gextimo.novafriq.africa",
+      "lien_libelle": "Visiter Gextimo",
+      "image": null,
+      "image_alt": null,
+      "caracteristiques": [
+        "Boutique en ligne personnalisée pour chaque créateur",
+        "Gestion des commandes et des stocks simplifiée",
+        "Paiement mobile et livraison intégrés",
+        "Mise en avant du savoir-faire artisanal africain"
+      ],
+      "citation": "Créez, gérez, rayonnez.",
+      "vedette": true
+    },
+    {
+      "id": "019f8eb9-2516-7161-9292-611c3e890062",
+      "slug": "produit-2",
+      "nom": "Produit 2",
+      "accroche": "SaaS Métier",
+      "description": "Un outil SaaS dédié aux PME africaines pour simplifier leur gestion opérationnelle et accélérer leur croissance.",
+      "statut": "a_venir",
+      "statut_libelle": "À venir",
+      "lien": null,
+      "lien_libelle": "Bientôt disponible",
+      "image": null,
+      "image_alt": null,
+      "caracteristiques": [],
+      "citation": null,
+      "vedette": false
+    },
+    {
+      "id": "019f8eb9-2518-71a8-b765-921ce19d1bd3",
+      "slug": "produit-3",
+      "nom": "Produit 3",
+      "accroche": "FinTech",
+      "description": "Une solution financière pensée pour les entrepreneurs africains : paiements, transferts et gestion multi-devises sans barrières.",
+      "statut": "a_venir",
+      "statut_libelle": "À venir",
+      "lien": null,
+      "lien_libelle": "Bientôt disponible",
+      "image": null,
+      "image_alt": null,
+      "caracteristiques": [],
+      "citation": null,
+      "vedette": false
+    }
+  ],
+  "membres": [
+    {
+      "id": "019f8eb9-251b-71ce-b9af-0f16ac123dc3",
+      "nom": "SAGBOHAN Aquilas",
+      "poste": "Développeur Frontend",
+      "description": "Interfaces, expérience utilisateur et intégration visuelle des produits NovafriQ.",
+      "badge": "Co-Associé",
+      "photo": null,
+      "photo_alt": null,
+      "liens": []
+    },
+    {
+      "id": "019f8eb9-251d-72e7-b0fe-36cd2b5516d5",
+      "nom": "KOUNOU A. Marcus Promide",
+      "poste": "Développeur Backend",
+      "description": "Architecture serveur, bases de données et logique métier des solutions NovafriQ.",
+      "badge": "Co-Associé",
+      "photo": null,
+      "photo_alt": null,
+      "liens": []
+    },
+    {
+      "id": "019f8eb9-251f-7147-8fdd-6986b9f7dcc1",
+      "nom": "OGOUMA S. Tania Grazelia",
+      "poste": "Community Manager",
+      "description": "Présence digitale, relation communauté et voix de NovafriQ sur les réseaux sociaux.",
+      "badge": "Co-Associée",
+      "photo": null,
+      "photo_alt": null,
+      "liens": []
+    },
+    {
+      "id": "019f8eb9-2520-7168-b241-f878966145a9",
+      "nom": "ACCLOMBESSI Pedro",
+      "poste": "Chef de Projet",
+      "description": "Coordination des livrables, suivi des jalons et cohérence d'ensemble des projets du groupe.",
+      "badge": "Co-Associé",
+      "photo": null,
+      "photo_alt": null,
+      "liens": []
+    }
+  ],
+  "postes": [
+    {
+      "id": "019f8eb9-2523-70fb-974d-0ac7a3834658",
+      "titre": "Développeur Frontend React",
+      "lieu": "Sèmè-Podji / Télétravail",
+      "type_contrat": "Temps plein",
+      "description": null
+    },
+    {
+      "id": "019f8eb9-2525-73e9-8620-5a0361328765",
+      "titre": "Développeur Backend Node.js / PHP",
+      "lieu": "Sèmè-Podji / Télétravail",
+      "type_contrat": "Temps plein",
+      "description": null
+    },
+    {
+      "id": "019f8eb9-2527-7171-9d53-f5935d370eda",
+      "titre": "Community Manager, Mode & Culture africaine",
+      "lieu": "Sèmè-Podji",
+      "type_contrat": "Temps plein",
+      "description": null
+    },
+    {
+      "id": "019f8eb9-2529-72b6-b099-12146173e33e",
+      "titre": "Chef de Projet Digital",
+      "lieu": "Sèmè-Podji",
+      "type_contrat": "Temps plein",
+      "description": null
+    }
+  ],
+  "partenaires": [],
+  "faqs": [
+    {
+      "id": "019f8eb9-252b-71a4-adfa-7d446931cb39",
+      "question": "Qu'est-ce que NovafriQ Groupe SAS ?",
+      "reponse": "NovafriQ est un groupe technologique panafricain, basé à Sèmè-Podji au Bénin, qui conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Le groupe s'organise autour de cinq pôles : innovation, formation, logiciels, communication et technologies industrielles.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-252d-713f-8acb-f8cd4cf47a0d",
+      "question": "Qu'est-ce que Gextimo ?",
+      "reponse": "Gextimo est le premier produit du groupe : une marketplace panafricaine qui connecte designers, tailleurs et artisans de mode à leur clientèle. Elle est accessible en ligne dès aujourd'hui.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-252e-73af-872f-9a248dae8de8",
+      "question": "NovafriQ propose-t-il des services sur mesure aux entreprises ?",
+      "reponse": "Oui. Au-delà de ses propres produits, NovafriQ accompagne les organisations sur le développement logiciel, les applications mobiles et web, l'intelligence artificielle, l'automatisation, la cybersécurité, le conseil et la communication digitale.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-252f-72c3-bebe-9b88b4af99fb",
+      "question": "Comment devenir partenaire ou investisseur ?",
+      "reponse": "Nous sommes ouverts à toute collaboration porteuse d'impact. Rendez-vous sur notre page Partenaires ou écrivez-nous directement via le formulaire de contact en précisant l'objet \"Partenariat stratégique\" ou \"Investissement\".",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-2531-71af-a007-807339863f8c",
+      "question": "NovafriQ recrute-t-il ?",
+      "reponse": "Nous recrutons régulièrement de nouveaux talents. Consultez notre page Carrières pour voir les postes ouverts, ou envoyez-nous une candidature spontanée.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-2532-70ec-ab89-126e41d1e3ba",
+      "question": "Dans quels pays NovafriQ est-il présent ?",
+      "reponse": "Le groupe est né au Bénin et opère aujourd'hui à l'échelle panafricaine à travers ses produits numériques, avec une ambition d'expansion progressive sur le continent.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-2534-7155-ac95-1f98f0a57a5f",
+      "question": "Combien de temps dure un projet avec NovafriQ ?",
+      "reponse": "Cela dépend de l'ampleur du projet. Notre méthode en six étapes (écoute, analyse, conception, développement, déploiement, accompagnement) permet d'estimer un calendrier précis dès les premiers échanges.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-2536-72ab-9f9b-39170b4a9626",
+      "question": "NovafriQ propose-t-il de la formation ?",
+      "reponse": "Oui, la formation est l'un de nos cinq pôles stratégiques : bootcamps, masterclass et coaching pour faire monter en compétence les talents technologiques africains.",
+      "categorie": null
+    },
+    {
+      "id": "019f8eb9-2538-712f-aceb-e5ee06a9677d",
+      "question": "Comment contacter l'équipe NovafriQ ?",
+      "reponse": "Le plus simple est d'utiliser le formulaire sur notre page Contact. Vous pouvez aussi nous écrire directement à direction@novafriq.africa.",
+      "categorie": null
+    }
+  ],
+  "blocs": {
+    "reperes": [
+      {
+        "id": "019f8eb9-2590-7340-bf68-e3a6bc71302d",
+        "titre": "Basé au Bénin",
+        "texte": "Sèmè-Podji, République du Bénin. Conçu en Afrique pour l'Afrique.",
+        "etiquette": null,
+        "icone": "maison",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2593-71b8-bd41-7791f4984287",
+        "titre": "Entrepreneur & Bâtisseur",
+        "texte": "Vision long terme, exécution concrète, impact mesurable.",
+        "etiquette": null,
+        "icone": "crayon",
+        "donnees": []
+      }
+    ],
+    "services": [
+      {
+        "id": "019f8eb9-256b-70d6-a2b0-151e39e95034",
+        "titre": "Développement logiciel",
+        "texte": "Applications métier et systèmes sur mesure, conçus pour durer et évoluer avec votre activité.",
+        "etiquette": null,
+        "icone": "code",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-256f-7231-82c4-0fee01c849fe",
+        "titre": "Applications mobiles",
+        "texte": "Des applications iOS et Android natives ou hybrides, pensées pour les usages et la connectivité africaine.",
+        "etiquette": null,
+        "icone": "mobile",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2574-72a4-9f06-ab907c0c289c",
+        "titre": "Applications web",
+        "texte": "Plateformes et interfaces web performantes, accessibles et responsives sur tous les écrans.",
+        "etiquette": null,
+        "icone": "ecran",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2578-72e0-b855-e122b51b86e0",
+        "titre": "Intelligence artificielle",
+        "texte": "Automatisation intelligente, analyse de données et intégration de modèles d'IA dans vos outils métier.",
+        "etiquette": null,
+        "icone": "puce",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-257d-7305-aad9-dcb2fa2d6156",
+        "titre": "Automatisation",
+        "texte": "Des flux de travail automatisés qui font gagner du temps à vos équipes et fiabilisent vos opérations.",
+        "etiquette": null,
+        "icone": "cycle",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2581-70e6-9e9c-5f39c1e1cb6a",
+        "titre": "Cybersécurité",
+        "texte": "Protection des données, des accès et des infrastructures pour des systèmes numériques dignes de confiance.",
+        "etiquette": null,
+        "icone": "bouclier",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2585-719b-aece-f912ceebeedc",
+        "titre": "Formation",
+        "texte": "Bootcamps, masterclass et coaching pour faire monter en compétence vos équipes techniques.",
+        "etiquette": null,
+        "icone": "diplome",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2588-7358-8999-3f31b4ff2d97",
+        "titre": "Conseil",
+        "texte": "Un accompagnement stratégique pour structurer votre transformation digitale, étape par étape.",
+        "etiquette": null,
+        "icone": "bulle",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-258c-701f-bd72-35c5efa46eaf",
+        "titre": "Communication digitale",
+        "texte": "Branding, marketing digital et community management pour donner de la voix à votre marque.",
+        "etiquette": null,
+        "icone": "megaphone",
+        "donnees": []
+      }
+    ],
+    "engagements": [
+      {
+        "id": "019f8eb9-2553-7281-90c3-e647a3266b3c",
+        "titre": "Souveraineté numérique",
+        "texte": "Nos produits sont conçus pour donner aux Africains le contrôle de leurs données, de leur commerce et de leur identité numérique.",
+        "etiquette": null,
+        "icone": "bouclier",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2557-712a-84c6-5ab0c0af4cd4",
+        "titre": "Impact continental",
+        "texte": "Chaque produit que nous lançons est pensé pour fonctionner à travers les frontières et les cultures du continent africain.",
+        "etiquette": null,
+        "icone": "globe",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-255b-71f5-a514-0bd6204c4665",
+        "titre": "Excellence d'exécution",
+        "texte": "Nous refusons les compromis sur la qualité. Un produit NovafriQ doit être aussi bien conçu qu'un produit de niveau mondial.",
+        "etiquette": null,
+        "icone": "pouls",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-255f-70ee-9be4-c65b07322bfc",
+        "titre": "Communauté d'abord",
+        "texte": "Nos utilisateurs ne sont pas des clients. Ce sont des membres d'un écosystème que nous construisons ensemble.",
+        "etiquette": null,
+        "icone": "equipe",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2563-7232-b01c-811781a38944",
+        "titre": "Confiance & sécurité",
+        "texte": "La conformité légale et la protection des données ne sont pas des contraintes pour nous : elles sont des fondements.",
+        "etiquette": null,
+        "icone": "cadenas",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2567-705a-9447-db9c46494eb0",
+        "titre": "Expérience utilisateur",
+        "texte": "Un produit difficile à utiliser est un produit qui ne remplit pas sa mission. Nous concevons pour la simplicité et la fluidité.",
+        "etiquette": null,
+        "icone": "sourire",
+        "donnees": []
+      }
+    ],
+    "piliers": [
+      {
+        "id": "019f8eb9-253b-73c5-b777-6d00c50307ef",
+        "titre": "Mode & Artisanat",
+        "texte": "Des plateformes dédiées aux créateurs de mode, designers et artisans africains pour valoriser leur savoir-faire à l'échelle mondiale.",
+        "etiquette": null,
+        "icone": "boite",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-253d-72e6-9d6a-06be5b9de4d2",
+        "titre": "SaaS Métier",
+        "texte": "Des outils de gestion, d'automatisation et de productivité adaptés aux réalités et contraintes des entreprises africaines.",
+        "etiquette": null,
+        "icone": "valise",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-253f-7332-b672-7c7a712a24f3",
+        "titre": "FinTech",
+        "texte": "Des solutions de paiement, de transfert et de gestion financière conçues pour les marchés africains, y compris les populations non bancarisées.",
+        "etiquette": null,
+        "icone": "monnaie",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2541-718f-8faf-37ea0a33366c",
+        "titre": "Éducation",
+        "texte": "Des plateformes d'apprentissage en ligne et de formation professionnelle pour démocratiser l'accès aux compétences numériques et techniques.",
+        "etiquette": null,
+        "icone": "diplome",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2542-72e8-b320-45c20bb883da",
+        "titre": "Technologies industrielles & Équipements",
+        "texte": "Conception et intégration d'équipements technologiques pour renforcer la souveraineté technologique africaine.",
+        "etiquette": null,
+        "icone": "engrenage",
+        "donnees": []
+      }
+    ],
+    "feuille_route": [
+      {
+        "id": "019f8eb9-25a2-7278-9558-1b15d167d60e",
+        "titre": "Création de NovafriQ",
+        "texte": "Naissance officielle du groupe à Sèmè-Podji, Bénin.",
+        "etiquette": "2024",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25a4-71e6-a5d2-d473b07c8937",
+        "titre": "Lancement de Gextimo",
+        "texte": "Ouverture publique de notre marketplace mode & artisanat.",
+        "etiquette": "2025",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25a6-7299-a90e-23c4901c0c21",
+        "titre": "Développement des services",
+        "texte": "Élargissement de l'offre : SaaS métier, IA, cybersécurité, conseil.",
+        "etiquette": "2026",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25a8-7083-a0b4-5922a32437ee",
+        "titre": "Centre de formation",
+        "texte": "Ouverture d'un centre dédié aux talents technologiques africains.",
+        "etiquette": "2027",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25aa-7399-9954-b65c582bca97",
+        "titre": "Expansion africaine",
+        "texte": "Déploiement de nos solutions dans de nouveaux marchés du continent.",
+        "etiquette": "2028",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25ac-7003-84c0-fbb7e826a5a5",
+        "titre": "Technologies industrielles",
+        "texte": "Investissement dans l'innovation et les équipements technologiques lourds.",
+        "etiquette": "2030+",
+        "icone": null,
+        "donnees": []
+      }
+    ],
+    "pourquoi": [
+      {
+        "id": "019f8eb9-2544-7021-9b03-bd5d6c72c6e7",
+        "titre": "Expertise multidisciplinaire",
+        "texte": "Développement, design, formation, communication et industrie réunis sous un même groupe pour porter vos projets de bout en bout.",
+        "etiquette": null,
+        "icone": "couches",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2546-700b-803b-bd6c91e18be7",
+        "titre": "Vision africaine",
+        "texte": "Nous concevons pour les réalités du continent : connectivité, langues, usages et paiements locaux, pas des solutions importées telles quelles.",
+        "etiquette": null,
+        "icone": "globe",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-2548-712b-96c4-efb7d153161a",
+        "titre": "Innovation continue",
+        "texte": "IA, automatisation, plateformes : nous investissons en continu dans les technologies qui donneront à nos clients une longueur d'avance.",
+        "etiquette": null,
+        "icone": "eclair",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-254a-7286-9d5b-3940ac6853a3",
+        "titre": "Méthode agile",
+        "texte": "Des cycles courts, une communication transparente et des livrables réguliers pour avancer vite sans sacrifier la qualité.",
+        "etiquette": null,
+        "icone": "cycle",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-254c-7393-9b5a-fa5186e7c1d7",
+        "titre": "Équipe expérimentée",
+        "texte": "Une équipe fondatrice pluridisciplinaire, engagée depuis le premier jour, qui grandit avec des profils rigoureusement sélectionnés.",
+        "etiquette": null,
+        "icone": "equipe",
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-254f-70df-b2d5-b547e0c7b304",
+        "titre": "Accompagnement durable",
+        "texte": "Notre relation ne s'arrête pas au déploiement : suivi, maintenance et évolution font partie de chaque engagement NovafriQ.",
+        "etiquette": null,
+        "icone": "cadenas",
+        "donnees": []
+      }
+    ],
+    "methode": [
+      {
+        "id": "019f8eb9-25ae-71f7-b4fe-82e0e13c6cb9",
+        "titre": "Écoute",
+        "texte": "Nous prenons le temps de comprendre votre contexte, vos contraintes et vos objectifs réels.",
+        "etiquette": "01",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25af-730f-819a-33a00894c753",
+        "titre": "Analyse",
+        "texte": "Étude approfondie des besoins, du marché et des solutions techniques possibles.",
+        "etiquette": "02",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25b1-7224-a534-dad3c9490dfc",
+        "titre": "Conception",
+        "texte": "Architecture, design et parcours utilisateur sont pensés avant la première ligne de code.",
+        "etiquette": "03",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25b2-71d6-841a-e804ef0bc3ce",
+        "titre": "Développement",
+        "texte": "Construction itérative de la solution, avec des points d'étape réguliers et transparents.",
+        "etiquette": "04",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25b4-7011-a566-dc9629e47258",
+        "titre": "Déploiement",
+        "texte": "Mise en production sécurisée, tests et passage de relais dans les meilleures conditions.",
+        "etiquette": "05",
+        "icone": null,
+        "donnees": []
+      },
+      {
+        "id": "019f8eb9-25b5-72fd-ad6d-93d8cb48cd5f",
+        "titre": "Accompagnement",
+        "texte": "Suivi, maintenance et évolution : notre relation continue bien après la livraison.",
+        "etiquette": "06",
+        "icone": null,
+        "donnees": []
+      }
+    ],
+    "poles": [
+      {
+        "id": "019f8eb9-2596-7278-bb81-b46bff70bd22",
+        "titre": "Innovation",
+        "texte": null,
+        "etiquette": null,
+        "icone": "ampoule",
+        "donnees": {
+          "items": [
+            "Produits SaaS",
+            "Intelligence artificielle",
+            "Applications",
+            "Plateformes"
+          ]
+        }
+      },
+      {
+        "id": "019f8eb9-2598-714f-bd05-8829a2ea7e9a",
+        "titre": "Formation",
+        "texte": null,
+        "etiquette": null,
+        "icone": "diplome",
+        "donnees": {
+          "items": [
+            "Bootcamps",
+            "Masterclass",
+            "Coaching"
+          ]
+        }
+      },
+      {
+        "id": "019f8eb9-259b-7224-829f-e9b64ef455eb",
+        "titre": "Logiciels",
+        "texte": null,
+        "etiquette": null,
+        "icone": "code",
+        "donnees": {
+          "items": [
+            "ERP",
+            "Applications métier",
+            "Développement web",
+            "Cybersécurité"
+          ]
+        }
+      },
+      {
+        "id": "019f8eb9-259e-70f6-b747-d4bed44b163e",
+        "titre": "Communication",
+        "texte": null,
+        "etiquette": null,
+        "icone": "megaphone",
+        "donnees": {
+          "items": [
+            "Branding",
+            "Marketing digital",
+            "Community Management"
+          ]
+        }
+      },
+      {
+        "id": "019f8eb9-25a0-72e3-9953-17faa3af53d0",
+        "titre": "Technologies industrielles",
+        "texte": null,
+        "etiquette": null,
+        "icone": "engrenage",
+        "donnees": {
+          "items": [
+            "Vision long terme",
+            "Équipements technologiques",
+            "Innovation industrielle"
+          ]
+        }
+      }
+    ]
+  },
+  "articles": [],
+  "genere_le": "2026-07-23T12:03:05+00:00"
+}
