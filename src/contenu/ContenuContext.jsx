@@ -61,6 +61,18 @@ export function useTexte() {
     contenu?.reglages?.[cle] ?? secours?.reglages?.[cle] ?? defaut
 }
 
+/**
+ * L'adresse d'une image réglée en administration.
+ *
+ * Null si aucune image n'est choisie : la page affiche alors son emplacement
+ * réservé, ce qui vaut mieux qu'une image cassée.
+ */
+export function useImage() {
+  const contenu = useContenu()
+
+  return (cle) => contenu?.images?.[cle] ?? secours?.images?.[cle] ?? null
+}
+
 /** Une des listes illustrées, par sa collection. */
 export function useBlocs(collection) {
   const contenu = useContenu()

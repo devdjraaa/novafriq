@@ -53,3 +53,13 @@
   .fondateur-layout { grid-template-columns: 1fr; gap: 40px; }
   .fondateur-photo { position: static; }
 }
+
+/* Photo réglée depuis le back-office : elle remplit le cadre réservé sans le
+   déformer, quel que soit le rapport de l'image envoyée. */
+.fondateur-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}

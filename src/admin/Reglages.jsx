@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { api } from './api'
+import ChoixImage from './kit/ChoixImage'
 
 /**
  * Les textes du site, groupés par page.
@@ -98,10 +99,20 @@ export default function Reglages() {
         <div className="adm-grille">
           {liste.map((r) => {
             const long = r.type === 'texte_long' || r.type === 'markdown'
+            const image = r.type === 'image'
             return (
-              <div key={r.cle} className={`adm-groupe${long ? ' pleine' : ''}`}>
+              <div key={r.cle} className={`adm-groupe${long || image ? ' pleine' : ''}`}>
                 <label className="adm-libelle" htmlFor={`r-${r.cle}`}>{r.libelle}</label>
-                {long ? (
+                {image ? (
+                  /* Un emplacement d'image du site : le fondateur, le visuel de
+                     la page Vision. Sans ce champ, ces deux photos restaient
+                     des cadres réservés qu'aucun écran ne permettait de
+                     remplir. */
+                  <ChoixImage
+                    valeur={valeurDe(r) || null}
+                    onChange={(id) => setModifs((m) => ({ ...m, [r.cle]: id || '' }))}
+                  />
+                ) : long ? (
                   <textarea
                     id={`r-${r.cle}`}
                     className="adm-zone"

@@ -4,7 +4,7 @@ import PoleCard from '../components/PoleCard'
 import Timeline from '../components/Timeline'
 import Reveal from '../components/Reveal'
 import useDocumentMeta from '../hooks/useDocumentMeta'
-import { useBlocs, useTexte } from '../contenu/ContenuContext'
+import { useBlocs, useImage, useTexte } from '../contenu/ContenuContext'
 import { Icone } from '../admin/kit/icones'
 import { Lignes } from './Carrieres'
 import './Vision.css'
@@ -14,6 +14,8 @@ export default function Vision() {
   const engagements = useBlocs('engagements')
   const poles = useBlocs('poles')
   const route = useBlocs('feuille_route')
+  const image = useImage()
+  const visuel = image('vision.image')
 
   useDocumentMeta(t('seo.vision.titre'), t('seo.vision.description'))
 
@@ -42,7 +44,9 @@ export default function Vision() {
 
             <div className="vision-image">
               <div className="fondateur-img-wrap">
-                <PlaceholderImg label="Photo ou visuel" dim="Portrait ou illustration, 600 × 800 px" />
+                {visuel
+                  ? <img src={visuel} alt="" className="fondateur-photo-img" />
+                  : <PlaceholderImg label="Photo ou visuel" dim="Portrait ou illustration, 600 × 800 px" />}
                 <div className="vision-badge">
                   <span className="vision-badge-num">{t('vision.badge_valeur')}</span>
                   <span className="vision-badge-txt">{t('vision.badge_libelle')}</span>

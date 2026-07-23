@@ -2,7 +2,7 @@ import PageHero from '../components/PageHero'
 import PlaceholderImg from '../components/PlaceholderImg'
 import { PersonIcon } from '../components/icons'
 import useDocumentMeta from '../hooks/useDocumentMeta'
-import { useBlocs, useTexte } from '../contenu/ContenuContext'
+import { useBlocs, useImage, useTexte } from '../contenu/ContenuContext'
 import { Icone } from '../admin/kit/icones'
 import { Lignes } from './Carrieres'
 import './Fondateur.css'
@@ -10,6 +10,8 @@ import './Fondateur.css'
 export default function Fondateur() {
   const t = useTexte()
   const reperes = useBlocs('reperes')
+  const image = useImage()
+  const photo = image('fondateur.photo')
 
   useDocumentMeta(t('seo.fondateur.titre'), t('seo.fondateur.description'))
 
@@ -24,7 +26,9 @@ export default function Fondateur() {
           <div className="fondateur-layout">
             <div className="fondateur-photo">
               <div className="fondateur-img-wrap">
-                <PlaceholderImg icon={<PersonIcon />} label="Photo du fondateur" dim="Portrait, 600 × 800 px" />
+                {photo
+                  ? <img src={photo} alt={t('fondateur.nom')} className="fondateur-photo-img" />
+                  : <PlaceholderImg icon={<PersonIcon />} label="Photo du fondateur" dim="Portrait, 600 × 800 px" />}
               </div>
               <div className="fondateur-name-card">
                 <div className="fondateur-name">{t('fondateur.nom')}</div>
