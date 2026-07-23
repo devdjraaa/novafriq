@@ -1,12 +1,12 @@
 import ContactForm from '../components/ContactForm'
 import useDocumentMeta from '../hooks/useDocumentMeta'
+import { useTexte } from '../contenu/ContenuContext'
 import './Contact.css'
 
 export default function Contact() {
-  useDocumentMeta(
-    'Contact — NovafriQ Groupe SAS',
-    'Contactez NovafriQ Groupe SAS pour un partenariat, un investissement, une candidature ou toute autre demande.'
-  )
+  const t = useTexte()
+
+  useDocumentMeta(t('seo.contact.titre'), t('seo.contact.description'))
 
   return (
     <div id="page-contact">
@@ -15,14 +15,14 @@ export default function Contact() {
           <div className="breadcrumb contact-breadcrumb">Accueil › <span className="contact-breadcrumb-current">Contact</span></div>
 
           <div className="contact-heading">
-            <div className="section-label">Écrivez-nous</div>
-            <h1 className="contact-title">Nous sommes à votre écoute.</h1>
+            <div className="section-label">{t('contact.hero.label')}</div>
+            <h1 className="contact-title">{t('contact.hero.titre')}</h1>
           </div>
 
           <div className="contact-layout">
             <div className="contact-info">
-              <h3>Une question, une opportunité, un projet ?</h3>
-              <p>Que vous soyez investisseur, partenaire potentiel, candidat ou simplement curieux de ce que nous construisons, nous répondons à chaque message.</p>
+              <h3>{t('contact.intro.titre')}</h3>
+              <p>{t('contact.intro.texte')}</p>
 
               <div className="contact-details">
                 <div className="contact-detail">
@@ -31,7 +31,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-detail-text">
                     <div className="contact-detail-label">Email</div>
-                    <div className="contact-detail-value">direction@novafriq.africa</div>
+                    <div className="contact-detail-value">{t('contact.email')}</div>
                   </div>
                 </div>
 
@@ -41,7 +41,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-detail-text">
                     <div className="contact-detail-label">Site web</div>
-                    <div className="contact-detail-value">www.novafriq.africa</div>
+                    <div className="contact-detail-value">{t('contact.site')}</div>
                   </div>
                 </div>
 
@@ -51,7 +51,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-detail-text">
                     <div className="contact-detail-label">Siège social</div>
-                    <div className="contact-detail-value">Sèmè-Podji, Agblangandan, République du Bénin</div>
+                    <div className="contact-detail-value">{t('contact.siege')}</div>
                   </div>
                 </div>
 
@@ -61,7 +61,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-detail-text">
                     <div className="contact-detail-label">Téléphone</div>
-                    <div className="contact-detail-value">+229 01 91 47 96 28</div>
+                    <div className="contact-detail-value">{t('contact.telephone')}</div>
                   </div>
                 </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
                     <div className="contact-detail-label">Réseaux sociaux</div>
                     <div className="contact-detail-socials">
                       <a
-                        href="https://www.linkedin.com/company/novafriqgrp/"
+                        href={t('social.linkedin')}
                         target="_blank"
                         rel="noreferrer"
                         className="contact-social-btn"
@@ -82,7 +82,7 @@ export default function Contact() {
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                       </a>
                       <a
-                        href="https://www.facebook.com/share/1BRvEVR24S/"
+                        href={t('social.facebook')}
                         target="_blank"
                         rel="noreferrer"
                         className="contact-social-btn"
@@ -101,7 +101,7 @@ export default function Contact() {
 
           <div className="contact-map">
             <iframe
-              src="https://www.google.com/maps?q=S%C3%A8m%C3%A9-Podji,+Agblangandan,+B%C3%A9nin&output=embed"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(t('contact.carte'))}&output=embed`}
               title="Localisation NovafriQ Groupe SAS"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
