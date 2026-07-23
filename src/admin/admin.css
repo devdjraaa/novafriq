@@ -1,0 +1,262 @@
+/**
+ * Habillage du back-office.
+ *
+ * Palette officielle du groupe, pas une seconde charte : le back-office doit
+ * ressembler à NovafriQ, sinon il devient un outil étranger qu'on hésite à
+ * ouvrir. Tout est défini ici, une fois — la recopie de styles d'un écran à
+ * l'autre a déjà produit quatre variantes du même champ sur Gextimo.
+ */
+
+.adm {
+  --adm-fond: #F6F7FB;
+  --adm-carte: #FFFFFF;
+  --adm-encre: #010E4F;
+  --adm-texte: #1B2340;
+  --adm-doux: #5A6485;
+  --adm-faible: #8A93AE;
+  --adm-bord: #E1E5F0;
+  --adm-creux: #F0F2F8;
+  --adm-accent: #27C6D9;
+  --adm-accent-sombre: #12A5B8;
+  --adm-succes: #0E9F6E;
+  --adm-alerte: #C2860B;
+  --adm-danger: #D93A3A;
+  --adm-barre: 248px;
+
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--adm-texte);
+  background: var(--adm-fond);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.adm *, .adm *::before, .adm *::after { box-sizing: border-box; }
+.adm button { font: inherit; cursor: pointer; }
+
+/* ── Structure ─────────────────────────────────────────────────────────── */
+.adm-shell { display: flex; min-height: 100vh; }
+
+.adm-barre {
+  width: var(--adm-barre);
+  flex: none;
+  background: var(--adm-encre);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.adm-marque {
+  padding: 20px 18px 16px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.adm-marque span { display: block; font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 500; opacity: .6; letter-spacing: .5px; text-transform: uppercase; margin-top: 2px; }
+
+.adm-nav { flex: 1; overflow-y: auto; padding: 6px 10px 16px; }
+.adm-nav-titre { font-size: 10px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; opacity: .45; padding: 14px 8px 6px; }
+.adm-nav a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 9px;
+  color: rgba(255,255,255,.78); text-decoration: none; font-weight: 500;
+  transition: background .15s, color .15s;
+}
+.adm-nav a:hover { background: rgba(255,255,255,.08); color: #fff; }
+.adm-nav a.actif { background: var(--adm-accent); color: var(--adm-encre); font-weight: 700; }
+.adm-nav a .pastille {
+  margin-left: auto; background: var(--adm-danger); color: #fff;
+  font-size: 10.5px; font-weight: 800; border-radius: 99px; padding: 1px 7px;
+}
+.adm-nav a.actif .pastille { background: var(--adm-encre); color: #fff; }
+
+.adm-pied { padding: 12px 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: 12px; }
+.adm-pied .qui { opacity: .7; margin-bottom: 6px; }
+.adm-pied button { background: rgba(255,255,255,.1); border: 0; color: #fff; border-radius: 8px; padding: 7px 10px; width: 100%; }
+.adm-pied button:hover { background: rgba(255,255,255,.18); }
+
+.adm-corps { flex: 1; min-width: 0; padding: 22px 26px 60px; }
+
+/* ── En-tête d'écran ───────────────────────────────────────────────────── */
+.adm-tete { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+.adm-tete h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 25px; color: var(--adm-encre); font-weight: 800; }
+.adm-tete p { color: var(--adm-doux); font-size: 13px; margin-top: 3px; max-width: 62ch; }
+.adm-tete .actions { margin-left: auto; display: flex; gap: 8px; }
+
+/* ── Contrôles ─────────────────────────────────────────────────────────── */
+.adm-btn {
+  border: 1px solid var(--adm-bord); background: var(--adm-carte); color: var(--adm-texte);
+  border-radius: 10px; padding: 9px 14px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 7px; transition: .15s;
+}
+.adm-btn:hover { border-color: var(--adm-faible); }
+.adm-btn:disabled { opacity: .5; cursor: not-allowed; }
+.adm-btn.primaire { background: var(--adm-encre); border-color: var(--adm-encre); color: #fff; }
+.adm-btn.primaire:hover { background: #02166f; }
+.adm-btn.danger { color: var(--adm-danger); border-color: #F3C9C9; background: #FDF2F2; }
+.adm-btn.discret { background: transparent; border-color: transparent; color: var(--adm-doux); padding: 7px 9px; }
+.adm-btn.discret:hover { background: var(--adm-creux); color: var(--adm-texte); }
+
+.adm-champ, .adm-zone, .adm-liste {
+  width: 100%; background: var(--adm-carte);
+  border: 1px solid var(--adm-bord); border-radius: 10px;
+  padding: 9px 11px; color: var(--adm-texte); outline: none;
+  font: inherit; transition: border-color .15s, box-shadow .15s;
+}
+.adm-champ:focus, .adm-zone:focus, .adm-liste:focus {
+  border-color: var(--adm-accent); box-shadow: 0 0 0 3px rgba(39,198,217,.18);
+}
+.adm-champ:disabled { background: var(--adm-creux); color: var(--adm-faible); }
+.adm-zone { resize: vertical; min-height: 92px; line-height: 1.6; }
+.adm-liste { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--adm-doux) 50%), linear-gradient(135deg, var(--adm-doux) 50%, transparent 50%); background-position: calc(100% - 17px) 51%, calc(100% - 12px) 51%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 32px; }
+
+.adm-libelle { display: block; font-size: 12.5px; font-weight: 600; color: var(--adm-doux); margin-bottom: 5px; }
+.adm-libelle .requis { color: var(--adm-danger); margin-left: 2px; }
+.adm-aide { font-size: 11.5px; color: var(--adm-faible); margin-top: 5px; line-height: 1.5; }
+.adm-erreur { font-size: 11.5px; color: var(--adm-danger); margin-top: 5px; font-weight: 500; }
+.adm-groupe { margin-bottom: 15px; }
+.adm-groupe:last-child { margin-bottom: 0; }
+
+/* Interrupteur */
+.adm-bascule { display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+.adm-bascule input { position: absolute; opacity: 0; pointer-events: none; }
+.adm-bascule .piste { width: 40px; height: 23px; border-radius: 99px; background: #CBD2E4; position: relative; transition: background .18s; flex: none; }
+.adm-bascule .piste::after { content: ''; position: absolute; top: 2.5px; left: 2.5px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: transform .18s; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+.adm-bascule input:checked + .piste { background: var(--adm-succes); }
+.adm-bascule input:checked + .piste::after { transform: translateX(17px); }
+.adm-bascule input:focus-visible + .piste { box-shadow: 0 0 0 3px rgba(39,198,217,.3); }
+
+/* ── Barre d'outils ────────────────────────────────────────────────────── */
+.adm-outils { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.adm-outils .recherche { flex: 1; min-width: 190px; max-width: 380px; }
+.adm-filtre { border: 1px solid var(--adm-bord); background: var(--adm-carte); border-radius: 10px; padding: 8px 11px; font-size: 13px; color: var(--adm-texte); }
+
+/* ── Tableau ───────────────────────────────────────────────────────────── */
+.adm-carte { background: var(--adm-carte); border: 1px solid var(--adm-bord); border-radius: 13px; overflow: hidden; }
+.adm-defile { overflow-x: auto; }
+.adm-tableau { width: 100%; border-collapse: collapse; min-width: 560px; }
+.adm-tableau th {
+  text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .5px;
+  text-transform: uppercase; color: var(--adm-faible);
+  padding: 11px 14px; background: var(--adm-creux); border-bottom: 1px solid var(--adm-bord);
+  white-space: nowrap;
+}
+.adm-tableau td { padding: 11px 14px; border-bottom: 1px solid var(--adm-creux); vertical-align: middle; }
+.adm-tableau tr:last-child td { border-bottom: 0; }
+.adm-tableau tbody tr:hover { background: #FAFBFF; }
+.adm-tableau .principal { font-weight: 600; color: var(--adm-encre); }
+.adm-tableau .actions { text-align: right; white-space: nowrap; }
+.adm-tableau .poignee { color: var(--adm-faible); cursor: grab; width: 26px; }
+.adm-tableau tr.deplace { opacity: .45; }
+.adm-tableau .coupe { max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.adm-etiquette { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 99px; padding: 3px 9px; white-space: nowrap; }
+.adm-etiquette.vert { color: var(--adm-succes); background: #E4F5EE; }
+.adm-etiquette.ambre { color: var(--adm-alerte); background: #FBF2DC; }
+.adm-etiquette.gris { color: var(--adm-doux); background: var(--adm-creux); }
+.adm-etiquette.bleu { color: var(--adm-accent-sombre); background: #DFF6F9; }
+.adm-etiquette.rouge { color: var(--adm-danger); background: #FDECEC; }
+
+.adm-vide { padding: 44px 22px; text-align: center; color: var(--adm-faible); }
+.adm-vide strong { display: block; color: var(--adm-doux); font-size: 15px; margin-bottom: 5px; }
+
+.adm-pagination { display: flex; align-items: center; gap: 10px; justify-content: flex-end; padding: 11px 14px; border-top: 1px solid var(--adm-bord); font-size: 12.5px; color: var(--adm-doux); }
+
+/* ── Fenêtre modale ────────────────────────────────────────────────────── */
+/* Le défaut corrigé sur Gextimo : sans hauteur plafonnée NI défilement
+   interne, le haut d'un contenu plus grand que l'écran devient inatteignable.
+   La fenêtre plafonne, l'en-tête et le pied restent fixes, le corps défile. */
+.adm-voile {
+  position: fixed; inset: 0; z-index: 90;
+  background: rgba(1,14,79,.45); backdrop-filter: blur(2px);
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+  animation: adm-apparait .16s ease;
+}
+.adm-modale {
+  background: var(--adm-carte); border-radius: 15px; width: 100%;
+  display: flex; flex-direction: column; max-height: 90vh;
+  box-shadow: 0 22px 60px rgba(1,14,79,.28);
+  animation: adm-monte .2s cubic-bezier(.2,.8,.3,1);
+}
+.adm-modale.sm { max-width: 420px; }
+.adm-modale.md { max-width: 620px; }
+.adm-modale.lg { max-width: 860px; }
+.adm-modale.xl { max-width: 1080px; }
+.adm-modale > header { display: flex; align-items: flex-start; gap: 12px; padding: 17px 20px; border-bottom: 1px solid var(--adm-bord); flex: none; }
+.adm-modale > header h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 19px; color: var(--adm-encre); font-weight: 800; }
+.adm-modale > header p { font-size: 12.5px; color: var(--adm-doux); margin-top: 2px; }
+.adm-modale > .contenu { padding: 20px; overflow-y: auto; flex: 1; }
+.adm-modale > footer { display: flex; gap: 9px; justify-content: flex-end; padding: 14px 20px; border-top: 1px solid var(--adm-bord); flex: none; background: var(--adm-creux); border-radius: 0 0 15px 15px; }
+
+@keyframes adm-apparait { from { opacity: 0 } to { opacity: 1 } }
+@keyframes adm-monte { from { opacity: 0; transform: translateY(10px) scale(.99) } to { opacity: 1; transform: none } }
+
+/* ── Grille de formulaire ──────────────────────────────────────────────── */
+.adm-grille { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.adm-grille .pleine { grid-column: 1 / -1; }
+.adm-section { grid-column: 1 / -1; font-size: 11px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--adm-faible); padding-top: 6px; border-top: 1px solid var(--adm-bord); margin-top: 4px; }
+.adm-section:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+
+/* ── Champ liste de textes ─────────────────────────────────────────────── */
+.adm-lignes { display: flex; flex-direction: column; gap: 7px; }
+.adm-ligne { display: flex; gap: 7px; align-items: center; }
+.adm-ligne .adm-champ { flex: 1; }
+
+/* ── Sélecteur d'image ─────────────────────────────────────────────────── */
+.adm-image { display: flex; gap: 12px; align-items: flex-start; }
+.adm-image .apercu { width: 96px; height: 96px; flex: none; border-radius: 11px; border: 1px solid var(--adm-bord); background: var(--adm-creux) center/cover no-repeat; display: grid; place-items: center; color: var(--adm-faible); font-size: 11px; text-align: center; padding: 6px; }
+.adm-galerie { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 11px; }
+.adm-galerie button { border: 2px solid transparent; border-radius: 11px; padding: 0; background: none; overflow: hidden; }
+.adm-galerie button.choisi { border-color: var(--adm-accent); }
+.adm-galerie img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 9px; background: var(--adm-creux); }
+
+/* ── Réglages en onglets ───────────────────────────────────────────────── */
+.adm-onglets { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 16px; }
+.adm-onglets button { border: 1px solid var(--adm-bord); background: var(--adm-carte); border-radius: 99px; padding: 7px 13px; font-size: 12.5px; font-weight: 600; color: var(--adm-doux); }
+.adm-onglets button.actif { background: var(--adm-encre); border-color: var(--adm-encre); color: #fff; }
+.adm-onglets button .compte { opacity: .6; margin-left: 5px; font-weight: 500; }
+
+.adm-barre-enreg {
+  position: sticky; bottom: 0; margin-top: 18px;
+  background: var(--adm-carte); border: 1px solid var(--adm-bord); border-radius: 13px;
+  padding: 12px 16px; display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 -4px 22px rgba(1,14,79,.07);
+}
+.adm-barre-enreg .info { flex: 1; font-size: 12.5px; color: var(--adm-doux); }
+
+/* ── Connexion ─────────────────────────────────────────────────────────── */
+.adm-connexion { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: var(--adm-encre); }
+.adm-connexion .boite { background: #fff; border-radius: 17px; padding: 30px 28px; width: 100%; max-width: 388px; box-shadow: 0 22px 60px rgba(0,0,0,.3); }
+.adm-connexion h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: var(--adm-encre); margin-bottom: 4px; font-weight: 800; }
+.adm-connexion .sous { color: var(--adm-doux); font-size: 13px; margin-bottom: 20px; }
+
+/* ── Messages système ──────────────────────────────────────────────────── */
+.adm-bandeau { border-radius: 11px; padding: 12px 15px; margin-bottom: 15px; font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
+.adm-bandeau.erreur { background: #FDECEC; border: 1px solid #F3C9C9; color: #8E2020; }
+.adm-bandeau.info { background: #DFF6F9; border: 1px solid #B8E9F0; color: #0A6B78; }
+.adm-bandeau.succes { background: #E4F5EE; border: 1px solid #BFE6D6; color: #0A6B4C; }
+
+/* ── Écrans étroits ────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .adm-grille { grid-template-columns: 1fr; }
+  .adm-shell { flex-direction: column; }
+  .adm-barre { width: 100%; height: auto; position: static; flex-direction: row; align-items: center; gap: 8px; padding-right: 10px; }
+  .adm-marque { padding: 12px 14px; }
+  .adm-marque span { display: none; }
+  .adm-nav { display: flex; gap: 4px; overflow-x: auto; padding: 8px 4px; }
+  .adm-nav-titre { display: none; }
+  .adm-nav a { white-space: nowrap; padding: 7px 11px; }
+  .adm-pied { border-top: 0; padding: 8px; }
+  .adm-pied .qui { display: none; }
+  .adm-corps { padding: 16px 14px 50px; }
+}
+
+/* Le réglage « moins d'animations » du système est respecté : ces effets sont
+   du confort, jamais de l'information. */
+@media (prefers-reduced-motion: reduce) {
+  .adm-voile, .adm-modale { animation: none; }
+  .adm *, .adm *::before, .adm *::after { transition-duration: .01ms !important; }
+}
