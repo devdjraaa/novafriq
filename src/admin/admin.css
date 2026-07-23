@@ -7,7 +7,16 @@
  * l'autre a déjà produit quatre variantes du même champ sur Gextimo.
  */
 
-.adm {
+/*
+ * Les variables vivent sur :root, PAS sur .adm.
+ *
+ * Les fenêtres modales sont rendues dans un portail attaché au body, donc hors
+ * de .adm : des variables déclarées sur .adm ne cascadent pas jusqu'à elles et
+ * toutes leurs bordures et leurs fonds se résolvent dans le vide. Constaté à
+ * l'écran — les champs du formulaire apparaissaient sans cadre ni fond. Le
+ * préfixe --adm- écarte tout risque de collision avec le thème du site.
+ */
+:root {
   --adm-fond: #F6F7FB;
   --adm-carte: #FFFFFF;
   --adm-encre: #010E4F;
@@ -22,7 +31,9 @@
   --adm-alerte: #C2860B;
   --adm-danger: #D93A3A;
   --adm-barre: 248px;
+}
 
+.adm {
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--adm-texte);
   background: var(--adm-fond);
@@ -33,6 +44,16 @@
 
 .adm *, .adm *::before, .adm *::after { box-sizing: border-box; }
 .adm button { font: inherit; cursor: pointer; }
+
+/* Le portail des fenêtres vit hors de .adm : il lui faut sa propre base. */
+.adm-voile, .adm-voile * { box-sizing: border-box; }
+.adm-voile {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--adm-texte);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.adm-voile button { font: inherit; cursor: pointer; }
 
 /* ── Structure ─────────────────────────────────────────────────────────── */
 .adm-shell { display: flex; min-height: 100vh; }
