@@ -74,3 +74,34 @@
 @media (max-width: 600px) {
   .actualites-grid { grid-template-columns: 1fr; }
 }
+
+/* Blog réel : cartes cliquables, pagination et cas vide assumé. */
+.actualite-card a { text-decoration: none; color: inherit; display: block; }
+.actualite-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.actualite-date { display: block; margin-top: 10px; font-size: 13px; color: var(--texte-sec); }
+
+.actualites-vide {
+  padding: 40px 24px;
+  border: 1px dashed var(--bordure);
+  border-radius: 14px;
+  text-align: center;
+  color: var(--texte-sec);
+}
+
+.actualites-pagination {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; margin-top: 32px; color: var(--texte-sec); font-size: 14px;
+}
+
+.article-contenu { max-width: 720px; }
+.article-contenu p { margin-bottom: 20px; line-height: 1.8; }
+.article-couverture { width: 100%; border-radius: 14px; margin: 24px 0 32px; display: block; }
+
+/* Un partenaire réel, quand il y en aura. */
+.partenaire-logo {
+  display: grid; place-items: center; padding: 24px;
+  border: 1px solid var(--bordure); border-radius: 14px;
+  background: var(--blanc); text-decoration: none; color: var(--texte);
+  font-weight: 600;
+}
+.partenaire-logo img { max-width: 100%; max-height: 64px; object-fit: contain; }

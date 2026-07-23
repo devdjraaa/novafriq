@@ -5,125 +5,33 @@ import AfriqueConstellation from '../components/AfriqueConstellation'
 import Reveal from '../components/Reveal'
 import useInViewport from '../hooks/useInViewport'
 import useDocumentMeta from '../hooks/useDocumentMeta'
+import { useBlocs, useRubrique, useTexte } from '../contenu/ContenuContext'
+import { Icone } from '../admin/kit/icones'
+import { Lignes } from './Carrieres'
 import './Home.css'
 
-const POURQUOI = [
-  {
-    name: 'Expertise multidisciplinaire',
-    desc: "Développement, design, formation, communication et industrie réunis sous un même groupe pour porter vos projets de bout en bout.",
-    icon: (
-      <>
-        <polygon points="12 2 2 7 12 12 22 7 12 2" />
-        <polyline points="2 17 12 22 22 17" />
-        <polyline points="2 12 12 17 22 12" />
-      </>
-    ),
-  },
-  {
-    name: 'Vision africaine',
-    desc: "Nous concevons pour les réalités du continent : connectivité, langues, usages et paiements locaux, pas des solutions importées telles quelles.",
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="10" />
-        <line x1="2" y1="12" x2="22" y2="12" />
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-      </>
-    ),
-  },
-  {
-    name: 'Innovation continue',
-    desc: "IA, automatisation, plateformes : nous investissons en continu dans les technologies qui donneront à nos clients une longueur d'avance.",
-    icon: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
-  },
-  {
-    name: 'Méthode agile',
-    desc: "Des cycles courts, une communication transparente et des livrables réguliers pour avancer vite sans sacrifier la qualité.",
-    icon: (
-      <>
-        <polyline points="23 4 23 10 17 10" />
-        <polyline points="1 20 1 14 7 14" />
-        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-      </>
-    ),
-  },
-  {
-    name: 'Équipe expérimentée',
-    desc: "Une équipe fondatrice pluridisciplinaire, engagée depuis le premier jour, qui grandit avec des profils rigoureusement sélectionnés.",
-    icon: (
-      <>
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </>
-    ),
-  },
-  {
-    name: 'Accompagnement durable',
-    desc: "Notre relation ne s'arrête pas au déploiement : suivi, maintenance et évolution font partie de chaque engagement NovafriQ.",
-    icon: (
-      <>
-        <rect x="3" y="11" width="18" height="11" rx="2" />
-        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-      </>
-    ),
-  },
-]
-
-const PILIERS = [
-  {
-    name: 'Mode & Artisanat',
-    desc: "Des plateformes dédiées aux créateurs de mode, designers et artisans africains pour valoriser leur savoir-faire à l'échelle mondiale.",
-    icon: <path d="M20 7l-8-4-8 4m16 0-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />,
-  },
-  {
-    name: 'SaaS Métier',
-    desc: "Des outils de gestion, d'automatisation et de productivité adaptés aux réalités et contraintes des entreprises africaines.",
-    icon: (
-      <>
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      </>
-    ),
-  },
-  {
-    name: 'FinTech',
-    desc: 'Des solutions de paiement, de transfert et de gestion financière conçues pour les marchés africains, y compris les populations non bancarisées.',
-    icon: (
-      <>
-        <line x1="12" y1="1" x2="12" y2="23" />
-        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </>
-    ),
-  },
-  {
-    name: 'Éducation',
-    desc: "Des plateformes d'apprentissage en ligne et de formation professionnelle pour démocratiser l'accès aux compétences numériques et techniques.",
-    icon: (
-      <>
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c3 3 9 3 12 0v-5" />
-      </>
-    ),
-  },
-  {
-    name: 'Technologies industrielles & Équipements',
-    desc: "Conception et intégration d'équipements technologiques pour renforcer la souveraineté technologique africaine.",
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-      </>
-    ),
-  },
-]
-
 export default function Home() {
-  useDocumentMeta(
-    "NovafriQ Groupe SAS — Construire l'Afrique numérique",
-    "NovafriQ Groupe SAS est un groupe technologique panafricain qui conçoit, développe et déploie des plateformes numériques à fort impact pour les entrepreneurs, créateurs et professionnels africains."
-  )
+  const t = useTexte()
+  const piliers = useBlocs('piliers')
+  const pourquoi = useBlocs('pourquoi')
+  const produits = useRubrique('produits')
+
+  useDocumentMeta(t('seo.accueil.titre'), t('seo.accueil.description'))
   const { ref: pourquoiRef, inView: pourquoiInView } = useInViewport()
+
+  // Le produit mis en avant est choisi en administration. À défaut, le premier
+  // produit en ligne — la section ne doit jamais rester vide sur l'accueil.
+  const vedette = produits.find((p) => p.vedette)
+    || produits.find((p) => p.statut === 'en_ligne')
+    || produits[0]
+
+  // Le titre porte une portion mise en valeur, saisie séparément : la repérer
+  // dans le texte évite d'imposer du balisage à l'éditeur.
+  const titre = t('accueil.hero.titre')
+  const accent = t('accueil.hero.accent')
+  const [avant, apres] = accent && titre.includes(accent)
+    ? [titre.slice(0, titre.indexOf(accent)), titre.slice(titre.indexOf(accent) + accent.length)]
+    : [titre, '']
 
   return (
     <div id="page-home">
@@ -133,21 +41,21 @@ export default function Home() {
         <div className="hero-bg-pattern"></div>
         <div className="hero-grid-lines"></div>
         <div className="hero-content">
-          <div className="hero-eyebrow">NovafriQ Groupe SAS</div>
+          <div className="hero-eyebrow">{t('accueil.hero.surtitre')}</div>
           <h1 className="hero-title">
-            Nous construisons<br />
-            les outils numériques<br />
-            de <em>l'Afrique de demain.</em>
+            <Lignes texte={avant} />
+            {accent && <em>{accent}</em>}
+            {apres && <Lignes texte={apres} />}
           </h1>
-          <p className="hero-subtitle">
-            NovafriQ est un groupe technologique panafricain qui conçoit, développe et déploie des plateformes numériques à fort impact pour les entrepreneurs, créateurs et professionnels africains.
-          </p>
+          <p className="hero-subtitle">{t('accueil.hero.soustitre')}</p>
           <div className="hero-actions">
-            <Link className="btn-primary" to="/produits">
-              Découvrir nos produits
+            <Link className="btn-primary" to={t('accueil.hero.bouton1_lien', '/produits')}>
+              {t('accueil.hero.bouton1')}
               <ArrowRightIcon />
             </Link>
-            <Link className="btn-secondary on-light" to="/vision">Notre vision</Link>
+            <Link className="btn-secondary on-light" to={t('accueil.hero.bouton2_lien', '/vision')}>
+              {t('accueil.hero.bouton2')}
+            </Link>
           </div>
         </div>
 
@@ -156,41 +64,40 @@ export default function Home() {
         </div>
 
         <div className="hero-stats">
-          <StatCounter value={1} label="Produit actif" />
-          <StatCounter value={5} label="Piliers stratégiques" />
-          <div className="hero-stat">
-            <span className="hero-stat-num">∞</span>
-            <span className="hero-stat-label">Ambition africaine</span>
-          </div>
+          <Chiffre valeur={t('accueil.stat1_valeur')} libelle={t('accueil.stat1_libelle')} />
+          <Chiffre valeur={t('accueil.stat2_valeur')} libelle={t('accueil.stat2_libelle')} />
+          <Chiffre valeur={t('accueil.stat3_valeur')} libelle={t('accueil.stat3_libelle')} />
         </div>
       </section>
 
       <section className="section section-light">
         <div className="container">
           <div className="qui-sommes-nous">
-            <div className="section-label">Qui sommes-nous ?</div>
-            <h2 className="section-title">Un groupe technologique<br />panafricain, né au Bénin.</h2>
-            <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales, adaptés à leur contexte, pas simplement importés.</p>
-            <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires (produits, formation, conseil et technologies industrielles) pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
-            <Link className="btn-secondary on-light" to="/vision">Découvrir notre vision <ArrowRightIcon /></Link>
+            <div className="section-label">{t('accueil.qui.label')}</div>
+            <h2 className="section-title"><Lignes texte={t('accueil.qui.titre')} /></h2>
+            <p>{t('accueil.qui.texte1')}</p>
+            <p>{t('accueil.qui.texte2')}</p>
+            <Link className="btn-secondary on-light" to="/vision">
+              {t('accueil.qui.bouton')} <ArrowRightIcon />
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="section section-gray">
         <div className="container">
-          <div className="section-label">Nos domaines</div>
-          <h2 className="section-title">Cinq piliers.<br />Un écosystème.</h2>
-          <p className="section-intro">NovafriQ intervient là où le numérique peut transformer durablement la vie des Africains : le commerce, la finance, le savoir, les outils métier et l'industrie.</p>
+          <div className="section-label">{t('accueil.piliers.label')}</div>
+          <h2 className="section-title"><Lignes texte={t('accueil.piliers.titre')} /></h2>
+          <p className="section-intro">{t('accueil.piliers.intro')}</p>
 
           <div className="piliers-grid">
-            {PILIERS.map((p, i) => (
-              <Reveal className="pilier-card" index={i} key={p.name}>
+            {piliers.map((p, i) => (
+              <Reveal className="pilier-card" index={i} key={p.id}>
                 <div className="pilier-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">{p.icon}</svg>
+                  <Icone nom={p.icone} taille={26} />
                 </div>
-                <div className="pilier-name">{p.name}</div>
-                <p className="pilier-desc">{p.desc}</p>
+                <div className="pilier-name">{p.titre}</div>
+                <p className="pilier-desc">{p.texte}</p>
               </Reveal>
             ))}
           </div>
@@ -199,68 +106,100 @@ export default function Home() {
 
       <section className="section section-light">
         <div className="container">
-          <div className="section-label">Pourquoi NovafriQ</div>
-          <h2 className="section-title">Pourquoi choisir<br />NovafriQ.</h2>
-          <p className="section-intro">Ce qui distingue notre approche des autres prestataires numériques du continent.</p>
+          <div className="section-label">{t('accueil.pourquoi.label')}</div>
+          <h2 className="section-title"><Lignes texte={t('accueil.pourquoi.titre')} /></h2>
+          <p className="section-intro">{t('accueil.pourquoi.intro')}</p>
 
           <div className="valeurs-grid cols-3" ref={pourquoiRef}>
-            {POURQUOI.map((p, i) => (
+            {pourquoi.map((p, i) => (
               <div
                 className={`valeur-item reveal${pourquoiInView ? ' in-view' : ''}`}
-                key={p.name}
+                key={p.id}
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <div className="valeur-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">{p.icon}</svg>
+                  <Icone nom={p.icone} taille={26} />
                 </div>
-                <div className="valeur-name">{p.name}</div>
-                <p className="valeur-desc">{p.desc}</p>
+                <div className="valeur-name">{p.titre}</div>
+                <p className="valeur-desc">{p.texte}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section section-gray">
-        <div className="container">
-          <div className="section-label">Notre flagship</div>
-          <h2 className="section-title">Gextimo, notre premier<br />produit en ligne.</h2>
-          <p className="section-intro">La marketplace dédiée aux créateurs de mode africains : designers, tailleurs et artisans.</p>
+      {vedette && (
+        <section className="section section-gray">
+          <div className="container">
+            <div className="section-label">{t('accueil.vedette.label')}</div>
+            <h2 className="section-title"><Lignes texte={t('accueil.vedette.titre')} /></h2>
+            <p className="section-intro">{t('accueil.vedette.intro')}</p>
 
-          <div className="produit-apercu">
-            <div>
-              <div className="produit-cover-card">
-                <img src="/logo/Couverture_Gextimo_1.png" alt="Gextimo — la plateforme des créateurs de mode africains" />
+            <div className="produit-apercu">
+              <div>
+                <div className="produit-cover-card">
+                  <img
+                    src={vedette.image || '/logo/Couverture_Gextimo_1.png'}
+                    alt={vedette.image_alt || `${vedette.nom} — ${vedette.accroche || ''}`}
+                  />
+                </div>
               </div>
-            </div>
-            <div>
-              <div className="produit-apercu-title">
-                <div className="gextimo-wordmark">Gextimo</div>
-                <span className="produit-status status-live">En ligne</span>
+              <div>
+                <div className="produit-apercu-title">
+                  <div className="gextimo-wordmark">{vedette.nom}</div>
+                  <span className={`produit-status status-${vedette.statut === 'en_ligne' ? 'live' : 'coming'}`}>
+                    {vedette.statut_libelle}
+                  </span>
+                </div>
+                <p className="produit-apercu-desc">
+                  {t('accueil.vedette.description') || vedette.description}
+                </p>
+                {vedette.citation && (
+                  <p className="produit-apercu-quote">&quot;{vedette.citation}&quot;</p>
+                )}
+                {vedette.lien && (
+                  <a className="btn-primary" href={vedette.lien} target="_blank" rel="noreferrer">
+                    {vedette.lien_libelle}
+                    <ExternalLinkIcon />
+                  </a>
+                )}
               </div>
-              <p className="produit-apercu-desc">
-                La première marketplace panafricaine dédiée aux créateurs de mode. Gextimo connecte designers, tailleurs et artisans à une clientèle qui valorise l'authenticité et le savoir-faire africain.
-              </p>
-              <p className="produit-apercu-quote">
-                "Créez, gérez, rayonnez."
-              </p>
-              <a className="btn-primary" href="https://gextimo.novafriq.africa" target="_blank" rel="noreferrer">
-                Visiter Gextimo
-                <ExternalLinkIcon />
-              </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="section section-dark">
         <div className="container" style={{ textAlign: 'center' }}>
-          <div className="section-label" style={{ justifyContent: 'center' }}>Travaillons ensemble</div>
-          <h2 className="section-title light" style={{ maxWidth: 600, margin: '0 auto 20px' }}>Vous avez un projet.<br />Nous avons les outils.</h2>
-          <p className="section-intro light" style={{ margin: '0 auto 40px' }}>Que vous soyez investisseur, partenaire stratégique ou entrepreneur, NovafriQ est ouvert à toute collaboration porteuse d'impact.</p>
-          <Link className="btn-primary" to="/contact">Prendre contact</Link>
+          <div className="section-label" style={{ justifyContent: 'center' }}>{t('accueil.cta.label')}</div>
+          <h2 className="section-title light" style={{ maxWidth: 600, margin: '0 auto 20px' }}>
+            <Lignes texte={t('accueil.cta.titre')} />
+          </h2>
+          <p className="section-intro light" style={{ margin: '0 auto 40px' }}>{t('accueil.cta.texte')}</p>
+          <Link className="btn-primary" to="/contact">{t('accueil.cta.bouton')}</Link>
         </div>
       </section>
+    </div>
+  )
+}
+
+/**
+ * Un chiffre du bandeau.
+ *
+ * Le compteur animé ne fonctionne que sur un nombre : « ∞ » est légitime et ne
+ * doit pas être forcé à zéro par une conversion silencieuse.
+ */
+function Chiffre({ valeur, libelle }) {
+  const nombre = Number(valeur)
+
+  if (Number.isFinite(nombre) && String(valeur).trim() !== '') {
+    return <StatCounter value={nombre} label={libelle} />
+  }
+
+  return (
+    <div className="hero-stat">
+      <span className="hero-stat-num">{valeur}</span>
+      <span className="hero-stat-label">{libelle}</span>
     </div>
   )
 }

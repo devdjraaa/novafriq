@@ -13,6 +13,7 @@ import Partenaires from './pages/Partenaires'
 import Contact from './pages/Contact'
 import Faq from './pages/Faq'
 import Actualites from './pages/Actualites'
+import Article from './pages/Article'
 import NotFound from './pages/NotFound'
 
 /**
@@ -50,6 +51,7 @@ function App() {
             <Route path="partenaires" element={<Partenaires />} />
             <Route path="faq" element={<Faq />} />
             <Route path="actualites" element={<Actualites />} />
+            <Route path="actualites/:slug" element={<Article />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>

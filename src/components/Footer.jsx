@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import { useToast } from './ToastContext'
+import { useRubrique, useTexte } from '../contenu/ContenuContext'
 import './Footer.css'
 
 export default function Footer() {
   const showToast = useToast()
+  const t = useTexte()
+  const produits = useRubrique('produits')
 
   return (
     <footer id="footer">
@@ -12,10 +15,10 @@ export default function Footer() {
           <Link to="/" className="footer-logo">
             <img src="/logo/novafriq-logo-marine.png" alt="NovafriQ Groupe SAS" className="footer-logo-img" />
           </Link>
-          <p>NovafriQ est un groupe technologique panafricain qui conçoit et déploie des plateformes numériques à fort impact pour l'Afrique.</p>
+          <p>{t('footer.description')}</p>
           <div className="footer-socials">
             <a
-              href="https://www.linkedin.com/company/novafriqgrp/"
+              href={t('social.linkedin')}
               target="_blank"
               rel="noreferrer"
               className="social-btn"
@@ -24,7 +27,7 @@ export default function Footer() {
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
             <a
-              href="https://www.facebook.com/share/1BRvEVR24S/"
+              href={t('social.facebook')}
               target="_blank"
               rel="noreferrer"
               className="social-btn"
@@ -48,9 +51,17 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Nos produits</h4>
           <ul>
-            <li><a href="https://gextimo.novafriq.africa" target="_blank" rel="noreferrer">Gextimo</a></li>
-            <li><button type="button" onClick={() => showToast('Bientôt disponible')}>Produit 2 (bientôt)</button></li>
-            <li><button type="button" onClick={() => showToast('Bientôt disponible')}>Produit 3 (bientôt)</button></li>
+            {produits.map((p) => (
+              <li key={p.id}>
+                {p.lien ? (
+                  <a href={p.lien} target="_blank" rel="noreferrer">{p.nom}</a>
+                ) : (
+                  <button type="button" onClick={() => showToast(p.lien_libelle || 'Bientôt disponible')}>
+                    {p.nom}{p.statut !== 'en_ligne' ? ' (bientôt)' : ''}
+                  </button>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -64,16 +75,16 @@ export default function Footer() {
         </div>
 
         <div className="footer-col footer-newsletter">
-          <h4>Newsletter</h4>
-          <p>Recevez nos actualités et l'avancée de nos produits.</p>
-          <button type="button" className="newsletter-soon" onClick={() => showToast('Bientôt disponible')}>
-            Bientôt disponible
+          <h4>{t('footer.newsletter.titre')}</h4>
+          <p>{t('footer.newsletter.texte')}</p>
+          <button type="button" className="newsletter-soon" onClick={() => showToast(t('footer.newsletter.bouton'))}>
+            {t('footer.newsletter.bouton')}
           </button>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <div className="footer-copy">© {new Date().getFullYear()} NovafriQ Groupe SAS. Tous droits réservés. Sèmè-Podji, Bénin.</div>
+        <div className="footer-copy">© {new Date().getFullYear()} {t('footer.copyright')}</div>
         <div className="footer-legal">
           <button type="button" onClick={() => showToast('Page en cours de rédaction')}>Mentions légales</button>
           <button type="button" onClick={() => showToast('Page en cours de rédaction')}>Politique de confidentialité</button>
